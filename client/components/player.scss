@@ -1,0 +1,10 @@
+@import "constants";
+
+.player {
+    width: $player-width;
+    height: $player-height;
+    z-index: 9999;
+    position: relative;
+    clear: both;
+    display: block;
+}

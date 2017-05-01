@@ -1,0 +1,11 @@
+@import 'constants';
+body {
+	background-color: #fff;
+}
+.stadium{
+	 background-image: url($pitch-background);
+	 background-repeat: no-repeat;
+	 width: $pitch-width;
+	 height: $pitch-height;
+	 float: left;
+}
