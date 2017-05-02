@@ -1,6 +1,8 @@
 import "./StackPlayers.scss";
+import "./player.scss";
 import React, {Component} from "react";
 import squad from "./squadOne.json";
+import Player from "./Player";
 const ASSET_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/';
 export default class StackPlayers extends Component {
 
@@ -29,16 +31,7 @@ function SubstitutePlayers({players}) {
                 players.map(player => {
                     return (
 
-                        <div className="playerProfile" key={player.name}>
-                            <div className="playerCard">
-                                <img src={ASSET_URL+ player.asset} className="playerCard-picture"/>
-                            </div>
-                            <div className="wrapperDesc">
-                                <div className="playerName">{player.name}</div>
-                                <div className="playerAge">{player.dob}</div>
-                                <div className="playerPosition">{player.pos}</div>
-                            </div>
-                        </div>
+                       <Player player={player} key={player.id} className="stackPlayer"/>
                     )
                 })
             }

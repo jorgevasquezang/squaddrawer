@@ -1,7 +1,7 @@
 import "./Stadium.scss";
 import React, {Component} from "react";
 import Player from "./Player";
-import squad from "./squadTwo.json";
+import squad from "./squadOne.json";
 export default class Stadium extends Component {
 
     constructor(props) {
@@ -14,19 +14,8 @@ export default class Stadium extends Component {
 
 
     render() {
-        return (<div className="stadium">
-            <div className="forwards">
-                <LoadMainSquad squad={squad.players.forwards}/>
-            </div>
-            <div className="midfielders">
-                <LoadMainSquad squad={squad.players.midfielders}/>
-            </div>
-            <div className="defenders">
-                <LoadMainSquad squad={squad.players.defenders}/>
-            </div>
-            <div className="goalkeeper">
-                <Player player={squad.players.goalkeeper}/>
-            </div>
+        return (<div className="stadium center">
+                <LoadMainSquad squad={squad.players}/>
         </div>);
     }
 }
@@ -36,7 +25,7 @@ function LoadMainSquad({squad}) {
         <div>{
             squad.map(player => {
                 return (
-                    <Player player={player} key={player.name}/>
+                    <Player player={player} key={player.id} id={'p' + player.id}/>
                 )
             })
         }

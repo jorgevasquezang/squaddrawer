@@ -12,7 +12,8 @@
             "goals": 1,
             "games": 16,
             "x": 110,
-            "y": -190
+            "y": -190,
+            "id": 1
         },
         {
             "name": "Robben",
@@ -26,7 +27,8 @@
             "goals": 19,
             "games": 30,
             "x": -110,
-            "y": -190
+            "y": -190,
+            "id": 2
         },
         {
             "name": "Rilbery",
@@ -40,7 +42,8 @@
             "goals": 9,
             "games": 22,
             "x": 150,
-            "y": 50
+            "y": 50,
+            "id": 3
         },
         {
             "name": "Schweinsteiger",
@@ -54,7 +57,8 @@
             "goals": 21,
             "games": 3,
             "x": 0,
-            "y": 100
+            "y": 100,
+            "id": 4
         },
         {
             "name": "Martinez",
@@ -68,7 +72,8 @@
             "goals": 0,
             "games": 2,
             "x": -150,
-            "y": 50
+            "y": 50,
+            "id": 5
         },
         {
             "name": "Alaba",
@@ -82,7 +87,8 @@
             "goals": 5,
             "games": 27,
             "x": -200,
-            "y": 180
+            "y": 180,
+            "id": 6
         },
         {
             "name": "Lahm",
@@ -96,7 +102,8 @@
             "goals": 2,
             "games": 25,
             "x": 200,
-            "y": 180
+            "y": 180,
+            "id": 7
         },
         {
             "name": "Benatia",
@@ -110,7 +117,8 @@
             "goals": 21,
             "games": 1,
             "x": 100,
-            "y": 300
+            "y": 300,
+            "id": 8
         },
         {
             "name": "Dante",
@@ -124,7 +132,23 @@
             "goals": 0,
             "games": 34,
             "x": -100,
-            "y": 300
+            "y": 300,
+            "id": 9
+        },
+        {
+            "name": "Dante1",
+            "asset": "bm-dante.jpg",
+            "origin": "Brazil",
+            "height": "1.87m",
+            "shirt": "4",
+            "pos": "Defence",
+            "class": "defenceL",
+            "dob": "32",
+            "goals": 0,
+            "games": 34,
+            "x": -100,
+            "y": 300,
+            "id": 10
         },
         {
             "name": "Neuer",
@@ -138,7 +162,8 @@
             "goals": 0,
             "games": 48,
             "x": 0,
-            "y": 410
+            "y": 410,
+            "id": 11
         }
     ]
 }

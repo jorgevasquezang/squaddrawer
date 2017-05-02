@@ -1,5 +1,5 @@
 import "./player.scss"
-import React, { Component } from "react";
+import React, {Component} from "react";
 const ASSET_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/';
 export default class Player extends Component {
 
@@ -7,18 +7,16 @@ export default class Player extends Component {
         super(props);
     }
 
-    render(){
+    render() {
         const {player} = this.props;
         return (
-            <div className={player.class + ' playerProfile'} key={player.name}>
+            <div className={this.props.className? 'playerProfile '+ this.props.className: 'playerProfile'} id={this.props.id}>
                 <div className="playerCard">
-                    <img src={ASSET_URL+ player.asset} className="playerCard-picture"/>
+                    <img className="playerCard-picture"/>
                 </div>
-                <div className="wrapperDesc">
-                    <div className="playerName">{player.name}</div>
-                    <div className="playerAge">{player.dob}</div>
-                    <div className="playerPosition">{player.pos}</div>
-                </div>
+                <div className="playerName">{player.name}</div>
+                <div className="playerAge">{player.dob}</div>
+                <div className="playerPosition">{player.pos}</div>
             </div>
         )
     }
