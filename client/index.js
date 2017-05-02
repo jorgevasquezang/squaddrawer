@@ -1,18 +1,21 @@
-//require("./style.css");
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import Stadium from "./components/stadium"
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {AppContainer} from 'react-hot-loader';
+import SquadBuilder from './components/SquadBuilder';
 
+const render = Component => {
+    ReactDOM.render(
+        <AppContainer>
+            <Component />
+        </AppContainer>,
+        document.getElementById('root')
+    )
+};
 
-class App extends Component {
+render(SquadBuilder);
 
-    render() {
-        return (
-            <div>Squad Drawer
-                <Stadium/>
-            </div>
-        )
-    }
-
+if (module.hot) {
+    module.hot.accept('./components/SquadBuilder', () => {
+        render(SquadBuilder)
+    })
 }
-ReactDOM.render(<App />, document.getElementById("root"));

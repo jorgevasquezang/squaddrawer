@@ -1,10 +1,41 @@
 @import "constants";
 
-.player {
-    width: $player-width;
-    height: $player-height;
-    z-index: 9999;
-    position: relative;
-    clear: both;
-    display: block;
+//@for $x from 1 through $quantity-players {
+.goalkeeper {
+  // position: absolute;
+  text-align: center;
+  width: $pitch-width;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
 }
+
+.midfielders {
+  // position: absolute;
+  text-align: center;
+  width: $pitch-width;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+.defenders {
+  // position: absolute;
+  text-align: center;
+  width: $pitch-width;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+.forwards {
+  // position: absolute;
+  text-align: center;
+  width: $pitch-width;
+  height: 150px;
+  margin: auto auto;
+  display: block;
+}
+
+//}
+

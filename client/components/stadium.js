@@ -1,55 +1,46 @@
-import styles from "./stadium.scss";
-import React, { Component } from "react";
-import Player from "./player";
-//import squadGame from "./squad.json"
+import "./Stadium.scss";
+import React, {Component} from "react";
+import Player from "./Player";
+import squad from "./squadTwo.json";
 export default class Stadium extends Component {
 
     constructor(props) {
         super(props);
-
-        this._isHome = true;
-        this._game = null;
-    }
-
-    swapSides() {
-        this._isHome = !this._isHome;
-    }
-    get isHome() {
-        return this._isHome;
-    }
-
-    get game() {
-        return this._game;
     }
 
     componentDidMount() {
+        console.log(squad.players.forwards);
     }
 
 
     render() {
         return (<div className="stadium">
-                    
-                </div>);
+            <div className="forwards">
+                <LoadMainSquad squad={squad.players.forwards}/>
+            </div>
+            <div className="midfielders">
+                <LoadMainSquad squad={squad.players.midfielders}/>
+            </div>
+            <div className="defenders">
+                <LoadMainSquad squad={squad.players.defenders}/>
+            </div>
+            <div className="goalkeeper">
+                <Player player={squad.players.goalkeeper}/>
+            </div>
+        </div>);
     }
-
 }
 
-function PlayerList({players}) {
+function LoadMainSquad({squad}) {
     return (
-        <div className="team js-team">
-            {
-                players.map(player => {
+        <div>{
+            squad.map(player => {
                 return (
-                        <div key={player.name}>
-                            <div className="js-player player" data-name={player.name} data-side={player.side} data-x={player.x} data-y={player.y}></div>
-                            <div className="player__label"><span>{player.name}</span></div>
-                            <div className="player__img"><img src={ASSET_URL + player.asset} /></div>
-                            <div className="player__card"> </div>
-                            <div className="player__placeholder"></div>
-                        </div>
-                    )
-                })
-            }
+                    <Player player={player} key={player.name}/>
+                )
+            })
+        }
         </div>
+
     );
 }

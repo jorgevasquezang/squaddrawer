@@ -1,0 +1,33 @@
+@import "constants";
+
+.playerProfile {
+  background-image: $player-gold;
+  float: left;
+  cursor: move;
+  width: 100px;
+  height: 153px;
+}
+
+.playerCard {
+  display: block;
+  overflow: hidden;
+  .playerCard-picture {
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+  .playerName {
+    display: block;
+  }
+  .playerAge {
+    display: block;
+  }
+  .playerPosition {
+    display: block;
+  }
+  .wrapperDesc{
+    float: left;
+
+  }
+}
+
