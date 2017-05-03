@@ -1,0 +1,24 @@
+.sidebar-container {
+  float: right;
+  padding-left: 4px;
+  padding-right: 4px;
+  display: block;
+  width: 308px;
+  height: 900px;
+  background-color: white;
+
+  .formation-container {
+
+    .f442 {
+      background-image: url("../../images/formations/442.png");
+      width: 100px;
+      height: 135px;
+    }
+    .f433 {
+      background-image: url("../../images/formations/433-2.png");
+      width: 100px;
+      height: 135px;
+    }
+
+  }
+}

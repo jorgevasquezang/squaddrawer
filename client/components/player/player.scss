@@ -1,0 +1,155 @@
+@import "../constants";
+
+.squad-433 {
+  #p11 {
+    top: 550px;
+    left: 390px;
+  }
+
+  #p10 {
+    top: 460px;
+    left: 780px;
+  }
+
+  #p9 {
+    top: 470px;
+    left: 546px;
+  }
+
+  #p8 {
+    top: 470px;
+    left: 235px;
+  }
+
+  #p7 {
+    top: 460px;
+    left: 5px;
+  }
+
+  #p6 {
+    top: 240px;
+    left: 605px;
+  }
+
+  #p5 {
+    top: 310px;
+    left: 390px;
+  }
+
+  #p4 {
+    top: 240px;
+    left: 175px;
+  }
+
+  #p3 {
+    top: 35px;
+    left: 691px;
+  }
+
+  #p2 {
+    top: 10px;
+    left: 390px;
+  }
+
+  #p1 {
+    top: 35px;
+    left: 90px;
+  }
+}
+
+.squad-442 {
+  #p11 {
+    top: 550px;
+    left: 390px;
+  }
+
+  #p10 {
+    top: 460px;
+    left: 780px;
+  }
+
+  #p9 {
+    top: 470px;
+    left: 546px;
+  }
+
+  #p8 {
+    top: 470px;
+    left: 235px;
+  }
+
+  #p7 {
+    top: 460px;
+    left: 5px;
+  }
+
+  #p6 {
+    top: 195px;
+    left: 770px;
+  }
+
+  #p5 {
+    top: 230px;
+    left: 546px;
+  }
+
+  #p4 {
+    top: 230px;
+    left: 235px;
+  }
+
+  #p3 {
+    top: 195px;
+    left: 15px;
+  }
+
+  #p2 {
+    top: 10px;
+    left: 491px;
+  }
+
+  #p1 {
+    top: 10px;
+    left: 290px;
+  }
+}
+
+.playerProfile {
+  background: $player-gold no-repeat center;
+  background-size: 96%;
+  width: 134px;
+  height: 200px;
+  position: absolute;
+  text-align: center;
+
+  .playerCard {
+    top: 27px;
+    left: 54px;
+    position: absolute;
+
+  }
+  .playerCard-picture {
+    background-size: contain;
+    background-image: $player-default;
+    width: 74px;
+    height: 74px;
+  }
+  .playerName {
+    top: 98px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .playerPosition {
+    display: block;
+    top: 147px;
+    width: 100%;
+    position: absolute;
+  }
+
+  .playerAge {
+    top: 131px;
+    width: 100%;
+    position: absolute;
+  }
+}

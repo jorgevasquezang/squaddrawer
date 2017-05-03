@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "423f67793d5efa5f1fd2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9fc4c0996747db54a9a0"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -709,7 +709,7 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./client/components/Player.js":
+/***/ "./client/components/SquadBuilder.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -721,7 +721,89 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__("./client/components/player.scss");
+var _react = __webpack_require__("./node_modules/react/react.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _stadium = __webpack_require__("./client/components/stadium/stadium.js");
+
+var _stadium2 = _interopRequireDefault(_stadium);
+
+var _StackPlayers = __webpack_require__("./client/components/stackPlayers/StackPlayers.js");
+
+var _StackPlayers2 = _interopRequireDefault(_StackPlayers);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by jvasquez on 5/1/2017.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+var SquadBuilder = function (_Component) {
+    _inherits(SquadBuilder, _Component);
+
+    function SquadBuilder(props) {
+        _classCallCheck(this, SquadBuilder);
+
+        return _possibleConstructorReturn(this, (SquadBuilder.__proto__ || Object.getPrototypeOf(SquadBuilder)).call(this, props));
+    }
+
+    _createClass(SquadBuilder, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                null,
+                _react2.default.createElement(
+                    "h1",
+                    { className: "center" },
+                    "Alianza Lima 2017"
+                ),
+                _react2.default.createElement(_stadium2.default, { defaultFormation: "433" }),
+                _react2.default.createElement(_StackPlayers2.default, null)
+            );
+        }
+    }]);
+
+    return SquadBuilder;
+}(_react.Component);
+
+var _default = SquadBuilder;
+exports.default = _default;
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(SquadBuilder, "SquadBuilder", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/SquadBuilder.js");
+
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/SquadBuilder.js");
+}();
+
+;
+
+/***/ }),
+
+/***/ "./client/components/player/player.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__("./client/components/player/player.scss");
 
 var _react = __webpack_require__("./node_modules/react/react.js");
 
@@ -790,18 +872,45 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(ASSET_URL, "ASSET_URL", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Player.js");
+    __REACT_HOT_LOADER__.register(ASSET_URL, "ASSET_URL", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/player/player.js");
 
-    __REACT_HOT_LOADER__.register(Player, "Player", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Player.js");
+    __REACT_HOT_LOADER__.register(Player, "Player", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/player/player.js");
 
-    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Player.js");
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/player/player.js");
 }();
 
 ;
 
 /***/ }),
 
-/***/ "./client/components/Sidebar.js":
+/***/ "./client/components/player/player.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/player/player.scss");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__("./node_modules/style-loader/addStyles.js")(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/player/player.scss", function() {
+			var newContent = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/player/player.scss");
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./client/components/sidebar/Sidebar.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -813,7 +922,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__("./client/components/Sidebar.scss");
+__webpack_require__("./client/components/sidebar/Sidebar.scss");
 
 var _react = __webpack_require__("./node_modules/react/react.js");
 
@@ -833,12 +942,22 @@ var SideBar = function (_Component) {
     function SideBar(props) {
         _classCallCheck(this, SideBar);
 
-        return _possibleConstructorReturn(this, (SideBar.__proto__ || Object.getPrototypeOf(SideBar)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (SideBar.__proto__ || Object.getPrototypeOf(SideBar)).call(this, props));
+
+        _this.changeFormation = _this.changeFormation.bind(_this);
+        return _this;
     }
 
     _createClass(SideBar, [{
+        key: "componentWillMount",
+        value: function componentWillMount() {
+            this.state = { formation: "433" };
+        }
+    }, {
         key: "render",
         value: function render() {
+            var formation = this.state.formation;
+
             return _react2.default.createElement(
                 "div",
                 { className: "sidebar-container" },
@@ -849,9 +968,35 @@ var SideBar = function (_Component) {
                         "h3",
                         null,
                         "Formaciones"
+                    ),
+                    _react2.default.createElement(
+                        "select",
+                        { onChange: this.changeFormation },
+                        _react2.default.createElement(
+                            "option",
+                            { value: "433" },
+                            "4-3-3"
+                        ),
+                        _react2.default.createElement(
+                            "option",
+                            { value: "442" },
+                            "4-4-2"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "formation-container" },
+                        _react2.default.createElement("div", { className: 'f' + this.props.defaultFormation })
                     )
                 )
             );
+        }
+    }, {
+        key: "changeFormation",
+        value: function changeFormation(event) {
+            console.log('changing state old state' + this.state.formation);
+            var formationValue = event.nativeEvent.target.value;
+            this.setState({ formation: formationValue });
         }
     }]);
 
@@ -867,22 +1012,22 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(SideBar, "SideBar", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Sidebar.js");
+    __REACT_HOT_LOADER__.register(SideBar, "SideBar", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/sidebar/Sidebar.js");
 
-    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Sidebar.js");
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/sidebar/Sidebar.js");
 }();
 
 ;
 
 /***/ }),
 
-/***/ "./client/components/Sidebar.scss":
+/***/ "./client/components/sidebar/Sidebar.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Sidebar.scss");
+var content = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/sidebar/Sidebar.scss");
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__("./node_modules/style-loader/addStyles.js")(content, {});
@@ -891,389 +1036,8 @@ if(content.locals) module.exports = content.locals;
 if(true) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Sidebar.scss", function() {
-			var newContent = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Sidebar.scss");
-			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./client/components/SquadBuilder.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__("./node_modules/react/react.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Stadium = __webpack_require__("./client/components/Stadium.js");
-
-var _Stadium2 = _interopRequireDefault(_Stadium);
-
-var _StackPlayers = __webpack_require__("./client/components/StackPlayers.js");
-
-var _StackPlayers2 = _interopRequireDefault(_StackPlayers);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by jvasquez on 5/1/2017.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-var SquadBuilder = function (_Component) {
-    _inherits(SquadBuilder, _Component);
-
-    function SquadBuilder() {
-        _classCallCheck(this, SquadBuilder);
-
-        return _possibleConstructorReturn(this, (SquadBuilder.__proto__ || Object.getPrototypeOf(SquadBuilder)).apply(this, arguments));
-    }
-
-    _createClass(SquadBuilder, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                null,
-                _react2.default.createElement(
-                    "h1",
-                    { className: "center" },
-                    "Alianza Lima 2017"
-                ),
-                _react2.default.createElement(_Stadium2.default, null),
-                _react2.default.createElement(_StackPlayers2.default, null)
-            );
-        }
-    }]);
-
-    return SquadBuilder;
-}(_react.Component);
-
-var _default = SquadBuilder;
-exports.default = _default;
-;
-
-var _temp = function () {
-    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-        return;
-    }
-
-    __REACT_HOT_LOADER__.register(SquadBuilder, "SquadBuilder", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/SquadBuilder.js");
-
-    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/SquadBuilder.js");
-}();
-
-;
-
-/***/ }),
-
-/***/ "./client/components/StackPlayers.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-__webpack_require__("./client/components/StackPlayers.scss");
-
-__webpack_require__("./client/components/player.scss");
-
-var _react = __webpack_require__("./node_modules/react/react.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _squadOne = __webpack_require__("./client/components/squadOne.json");
-
-var _squadOne2 = _interopRequireDefault(_squadOne);
-
-var _Player = __webpack_require__("./client/components/Player.js");
-
-var _Player2 = _interopRequireDefault(_Player);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var StackPlayers = function (_Component) {
-    _inherits(StackPlayers, _Component);
-
-    function StackPlayers(props) {
-        _classCallCheck(this, StackPlayers);
-
-        return _possibleConstructorReturn(this, (StackPlayers.__proto__ || Object.getPrototypeOf(StackPlayers)).call(this, props));
-    }
-
-    _createClass(StackPlayers, [{
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            console.log("Get json data " + _squadOne2.default.players);
-        }
-    }, {
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "stackPlayers" },
-                _react2.default.createElement(
-                    "h2",
-                    null,
-                    "Substitutes"
-                ),
-                _react2.default.createElement(BenchPlayers, { players: _squadOne2.default.players.bench })
-            );
-        }
-    }]);
-
-    return StackPlayers;
-}(_react.Component);
-
-var _default = StackPlayers;
-exports.default = _default;
-
-
-function BenchPlayers(_ref) {
-    var players = _ref.players;
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        players.map(function (player) {
-            return _react2.default.createElement(_Player2.default, { player: player, key: player.id, className: "stackPlayer" });
-        })
-    );
-}
-;
-
-var _temp = function () {
-    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-        return;
-    }
-
-    __REACT_HOT_LOADER__.register(StackPlayers, "StackPlayers", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.js");
-
-    __REACT_HOT_LOADER__.register(BenchPlayers, "BenchPlayers", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.js");
-
-    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.js");
-}();
-
-;
-
-/***/ }),
-
-/***/ "./client/components/StackPlayers.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/StackPlayers.scss");
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__("./node_modules/style-loader/addStyles.js")(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(true) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/StackPlayers.scss", function() {
-			var newContent = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/StackPlayers.scss");
-			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./client/components/Stadium.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-__webpack_require__("./client/components/Stadium.scss");
-
-var _react = __webpack_require__("./node_modules/react/react.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Player = __webpack_require__("./client/components/Player.js");
-
-var _Player2 = _interopRequireDefault(_Player);
-
-var _squadOne = __webpack_require__("./client/components/squadOne.json");
-
-var _squadOne2 = _interopRequireDefault(_squadOne);
-
-var _Sidebar = __webpack_require__("./client/components/Sidebar.js");
-
-var _Sidebar2 = _interopRequireDefault(_Sidebar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Stadium = function (_Component) {
-    _inherits(Stadium, _Component);
-
-    function Stadium(props) {
-        _classCallCheck(this, Stadium);
-
-        return _possibleConstructorReturn(this, (Stadium.__proto__ || Object.getPrototypeOf(Stadium)).call(this, props));
-    }
-
-    _createClass(Stadium, [{
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            console.log(_squadOne2.default.players.forwards);
-        }
-    }, {
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "container" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "row" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "flexbox" },
-                        _react2.default.createElement(
-                            "div",
-                            { className: "stadium-container" },
-                            _react2.default.createElement(
-                                "div",
-                                { className: "stadium center" },
-                                _react2.default.createElement(LoadMainSquad, { squad: _squadOne2.default.players.main })
-                            )
-                        )
-                    ),
-                    _react2.default.createElement(_Sidebar2.default, null)
-                )
-            );
-        }
-    }]);
-
-    return Stadium;
-}(_react.Component);
-
-var _default = Stadium;
-exports.default = _default;
-
-
-function LoadMainSquad(_ref) {
-    var squad = _ref.squad;
-
-    return _react2.default.createElement(
-        "div",
-        null,
-        squad.map(function (player) {
-            return _react2.default.createElement(_Player2.default, { player: player, key: player.id, id: 'p' + player.id });
-        })
-    );
-}
-;
-
-var _temp = function () {
-    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-        return;
-    }
-
-    __REACT_HOT_LOADER__.register(Stadium, "Stadium", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Stadium.js");
-
-    __REACT_HOT_LOADER__.register(LoadMainSquad, "LoadMainSquad", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Stadium.js");
-
-    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Stadium.js");
-}();
-
-;
-
-/***/ }),
-
-/***/ "./client/components/Stadium.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Stadium.scss");
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__("./node_modules/style-loader/addStyles.js")(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(true) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Stadium.scss", function() {
-			var newContent = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Stadium.scss");
-			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./client/components/player.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/player.scss");
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__("./node_modules/style-loader/addStyles.js")(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(true) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/player.scss", function() {
-			var newContent = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/player.scss");
+		module.hot.accept("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/sidebar/Sidebar.scss", function() {
+			var newContent = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/sidebar/Sidebar.scss");
 			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 			update(newContent);
 		});
@@ -1489,6 +1253,273 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./client/components/stackPlayers/StackPlayers.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__("./client/components/stackPlayers/StackPlayers.scss");
+
+__webpack_require__("./client/components/player/player.scss");
+
+var _react = __webpack_require__("./node_modules/react/react.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _squadOne = __webpack_require__("./client/components/squadOne.json");
+
+var _squadOne2 = _interopRequireDefault(_squadOne);
+
+var _player = __webpack_require__("./client/components/player/player.js");
+
+var _player2 = _interopRequireDefault(_player);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var StackPlayers = function (_Component) {
+    _inherits(StackPlayers, _Component);
+
+    function StackPlayers(props) {
+        _classCallCheck(this, StackPlayers);
+
+        return _possibleConstructorReturn(this, (StackPlayers.__proto__ || Object.getPrototypeOf(StackPlayers)).call(this, props));
+    }
+
+    _createClass(StackPlayers, [{
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            console.log("Get json data " + _squadOne2.default.players);
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "stackPlayers" },
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    "Substitutes"
+                ),
+                _react2.default.createElement(BenchPlayers, { players: _squadOne2.default.players.bench })
+            );
+        }
+    }]);
+
+    return StackPlayers;
+}(_react.Component);
+
+var _default = StackPlayers;
+exports.default = _default;
+
+
+function BenchPlayers(_ref) {
+    var players = _ref.players;
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        players.map(function (player) {
+            return _react2.default.createElement(_player2.default, { player: player, key: player.id, className: "stackPlayer" });
+        })
+    );
+}
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(StackPlayers, "StackPlayers", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/stackPlayers/StackPlayers.js");
+
+    __REACT_HOT_LOADER__.register(BenchPlayers, "BenchPlayers", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/stackPlayers/StackPlayers.js");
+
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/stackPlayers/StackPlayers.js");
+}();
+
+;
+
+/***/ }),
+
+/***/ "./client/components/stackPlayers/StackPlayers.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/stackPlayers/StackPlayers.scss");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__("./node_modules/style-loader/addStyles.js")(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/stackPlayers/StackPlayers.scss", function() {
+			var newContent = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/stackPlayers/StackPlayers.scss");
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./client/components/stadium/stadium.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__("./client/components/stadium/stadium.scss");
+
+var _react = __webpack_require__("./node_modules/react/react.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _player = __webpack_require__("./client/components/player/player.js");
+
+var _player2 = _interopRequireDefault(_player);
+
+var _squadOne = __webpack_require__("./client/components/squadOne.json");
+
+var _squadOne2 = _interopRequireDefault(_squadOne);
+
+var _Sidebar = __webpack_require__("./client/components/sidebar/Sidebar.js");
+
+var _Sidebar2 = _interopRequireDefault(_Sidebar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Stadium = function (_Component) {
+    _inherits(Stadium, _Component);
+
+    function Stadium(props) {
+        _classCallCheck(this, Stadium);
+
+        return _possibleConstructorReturn(this, (Stadium.__proto__ || Object.getPrototypeOf(Stadium)).call(this, props));
+    }
+
+    _createClass(Stadium, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "container" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "row" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "flexbox" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "stadium-container" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "stadium center squad-" + this.props.defaultFormation },
+                                _react2.default.createElement(LoadMainSquad, { squad: _squadOne2.default.players.main })
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(_Sidebar2.default, { defaultFormation: this.props.defaultFormation })
+                )
+            );
+        }
+    }]);
+
+    return Stadium;
+}(_react.Component);
+
+var _default = Stadium;
+exports.default = _default;
+
+
+function LoadMainSquad(_ref) {
+    var squad = _ref.squad;
+
+    return _react2.default.createElement(
+        "div",
+        null,
+        squad.map(function (player) {
+            return _react2.default.createElement(_player2.default, { player: player, key: player.id, id: 'p' + player.id });
+        })
+    );
+}
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(Stadium, "Stadium", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/stadium/stadium.js");
+
+    __REACT_HOT_LOADER__.register(LoadMainSquad, "LoadMainSquad", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/stadium/stadium.js");
+
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/stadium/stadium.js");
+}();
+
+;
+
+/***/ }),
+
+/***/ "./client/components/stadium/stadium.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/stadium/stadium.scss");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__("./node_modules/style-loader/addStyles.js")(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/stadium/stadium.scss", function() {
+			var newContent = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/stadium/stadium.scss");
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
 /***/ "./client/fonts/Capsuula.ttf":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1507,6 +1538,20 @@ module.exports = __webpack_require__.p + "/fonts/Capsuula.woff";
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "/images/background-pattern.jpg";
+
+/***/ }),
+
+/***/ "./client/images/formations/433-2.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/images/433-2.png";
+
+/***/ }),
+
+/***/ "./client/images/formations/442.png":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/images/442.png";
 
 /***/ }),
 
@@ -1778,7 +1823,7 @@ module.exports = function () {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Sidebar.scss":
+/***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/player/player.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(true);
@@ -1786,14 +1831,14 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".sidebar-container {\n  float: right;\n  padding-left: 4px;\n  padding-right: 4px;\n  display: block;\n  width: 308px;\n  background-color: white; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/Sidebar.scss"],"names":[],"mappings":"AAAA;EACE,aAAY;EACZ,kBAAiB;EACjB,mBAAkB;EAClB,eAAc;EACd,aAAY;EACZ,wBAAuB,EACxB","file":"Sidebar.scss","sourcesContent":[".sidebar-container {\n  float: right;\n  padding-left: 4px;\n  padding-right: 4px;\n  display: block;\n  width: 308px;\n  background-color: white;\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".center {\n  text-align: center; }\n\n.squad-433 #p11 {\n  top: 550px;\n  left: 390px; }\n\n.squad-433 #p10 {\n  top: 460px;\n  left: 780px; }\n\n.squad-433 #p9 {\n  top: 470px;\n  left: 546px; }\n\n.squad-433 #p8 {\n  top: 470px;\n  left: 235px; }\n\n.squad-433 #p7 {\n  top: 460px;\n  left: 5px; }\n\n.squad-433 #p6 {\n  top: 240px;\n  left: 605px; }\n\n.squad-433 #p5 {\n  top: 310px;\n  left: 390px; }\n\n.squad-433 #p4 {\n  top: 240px;\n  left: 175px; }\n\n.squad-433 #p3 {\n  top: 35px;\n  left: 691px; }\n\n.squad-433 #p2 {\n  top: 10px;\n  left: 390px; }\n\n.squad-433 #p1 {\n  top: 35px;\n  left: 90px; }\n\n.squad-442 #p11 {\n  top: 550px;\n  left: 390px; }\n\n.squad-442 #p10 {\n  top: 460px;\n  left: 780px; }\n\n.squad-442 #p9 {\n  top: 470px;\n  left: 546px; }\n\n.squad-442 #p8 {\n  top: 470px;\n  left: 235px; }\n\n.squad-442 #p7 {\n  top: 460px;\n  left: 5px; }\n\n.squad-442 #p6 {\n  top: 195px;\n  left: 770px; }\n\n.squad-442 #p5 {\n  top: 230px;\n  left: 546px; }\n\n.squad-442 #p4 {\n  top: 230px;\n  left: 235px; }\n\n.squad-442 #p3 {\n  top: 195px;\n  left: 15px; }\n\n.squad-442 #p2 {\n  top: 10px;\n  left: 491px; }\n\n.squad-442 #p1 {\n  top: 10px;\n  left: 290px; }\n\n.playerProfile {\n  background: url(" + __webpack_require__("./client/images/large-gold-rare.png") + ") no-repeat center;\n  background-size: 96%;\n  width: 134px;\n  height: 200px;\n  position: absolute;\n  text-align: center; }\n\n.playerProfile .playerCard {\n    top: 27px;\n    left: 54px;\n    position: absolute; }\n\n.playerProfile .playerCard-picture {\n    background-size: contain;\n    background-image: url(" + __webpack_require__("./client/images/player.png") + ");\n    width: 74px;\n    height: 74px; }\n\n.playerProfile .playerName {\n    top: 98px;\n    position: absolute;\n    width: 100%; }\n\n.playerProfile .playerPosition {\n    display: block;\n    top: 147px;\n    width: 100%;\n    position: absolute; }\n\n.playerProfile .playerAge {\n    top: 131px;\n    width: 100%;\n    position: absolute; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/player/player.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACTD;EAEI,WAAU;EACV,YAAW,EACZ;;AAJH;EAOI,WAAU;EACV,YAAW,EACZ;;AATH;EAYI,WAAU;EACV,YAAW,EACZ;;AAdH;EAiBI,WAAU;EACV,YAAW,EACZ;;AAnBH;EAsBI,WAAU;EACV,UAAS,EACV;;AAxBH;EA2BI,WAAU;EACV,YAAW,EACZ;;AA7BH;EAgCI,WAAU;EACV,YAAW,EACZ;;AAlCH;EAqCI,WAAU;EACV,YAAW,EACZ;;AAvCH;EA0CI,UAAS;EACT,YAAW,EACZ;;AA5CH;EA+CI,UAAS;EACT,YAAW,EACZ;;AAjDH;EAoDI,UAAS;EACT,WAAU,EACX;;AAGH;EAEI,WAAU;EACV,YAAW,EACZ;;AAJH;EAOI,WAAU;EACV,YAAW,EACZ;;AATH;EAYI,WAAU;EACV,YAAW,EACZ;;AAdH;EAiBI,WAAU;EACV,YAAW,EACZ;;AAnBH;EAsBI,WAAU;EACV,UAAS,EACV;;AAxBH;EA2BI,WAAU;EACV,YAAW,EACZ;;AA7BH;EAgCI,WAAU;EACV,YAAW,EACZ;;AAlCH;EAqCI,WAAU;EACV,YAAW,EACZ;;AAvCH;EA0CI,WAAU;EACV,WAAU,EACX;;AA5CH;EA+CI,UAAS;EACT,YAAW,EACZ;;AAjDH;EAoDI,UAAS;EACT,YAAW,EACZ;;AAGH;EACE,2DAAyC;EACzC,qBAAoB;EACpB,aAAY;EACZ,cAAa;EACb,mBAAkB;EAClB,mBAAkB,EAgCnB;;AAtCD;IASI,UAAS;IACT,WAAU;IACV,mBAAkB,EAEnB;;AAbH;IAeI,yBAAwB;IACxB,gDDhI2C;ICiI3C,YAAW;IACX,aAAY,EACb;;AAnBH;IAqBI,UAAS;IACT,mBAAkB;IAClB,YAAW,EACZ;;AAxBH;IA2BI,eAAc;IACd,WAAU;IACV,YAAW;IACX,mBAAkB,EACnB;;AA/BH;IAkCI,WAAU;IACV,YAAW;IACX,mBAAkB,EACnB","file":"player.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../../images/pitch.png');\n$player-gold: url('../../images/large-gold-rare.png');\n$player-default: url('../../images/player.png');\n$pitch-width: 100%;\n$pitch-height: 900px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}\n\n","@import \"../constants\";\n\n.squad-433 {\n  #p11 {\n    top: 550px;\n    left: 390px;\n  }\n\n  #p10 {\n    top: 460px;\n    left: 780px;\n  }\n\n  #p9 {\n    top: 470px;\n    left: 546px;\n  }\n\n  #p8 {\n    top: 470px;\n    left: 235px;\n  }\n\n  #p7 {\n    top: 460px;\n    left: 5px;\n  }\n\n  #p6 {\n    top: 240px;\n    left: 605px;\n  }\n\n  #p5 {\n    top: 310px;\n    left: 390px;\n  }\n\n  #p4 {\n    top: 240px;\n    left: 175px;\n  }\n\n  #p3 {\n    top: 35px;\n    left: 691px;\n  }\n\n  #p2 {\n    top: 10px;\n    left: 390px;\n  }\n\n  #p1 {\n    top: 35px;\n    left: 90px;\n  }\n}\n\n.squad-442 {\n  #p11 {\n    top: 550px;\n    left: 390px;\n  }\n\n  #p10 {\n    top: 460px;\n    left: 780px;\n  }\n\n  #p9 {\n    top: 470px;\n    left: 546px;\n  }\n\n  #p8 {\n    top: 470px;\n    left: 235px;\n  }\n\n  #p7 {\n    top: 460px;\n    left: 5px;\n  }\n\n  #p6 {\n    top: 195px;\n    left: 770px;\n  }\n\n  #p5 {\n    top: 230px;\n    left: 546px;\n  }\n\n  #p4 {\n    top: 230px;\n    left: 235px;\n  }\n\n  #p3 {\n    top: 195px;\n    left: 15px;\n  }\n\n  #p2 {\n    top: 10px;\n    left: 491px;\n  }\n\n  #p1 {\n    top: 10px;\n    left: 290px;\n  }\n}\n\n.playerProfile {\n  background: $player-gold no-repeat center;\n  background-size: 96%;\n  width: 134px;\n  height: 200px;\n  position: absolute;\n  text-align: center;\n\n  .playerCard {\n    top: 27px;\n    left: 54px;\n    position: absolute;\n\n  }\n  .playerCard-picture {\n    background-size: contain;\n    background-image: $player-default;\n    width: 74px;\n    height: 74px;\n  }\n  .playerName {\n    top: 98px;\n    position: absolute;\n    width: 100%;\n  }\n\n  .playerPosition {\n    display: block;\n    top: 147px;\n    width: 100%;\n    position: absolute;\n  }\n\n  .playerAge {\n    top: 131px;\n    width: 100%;\n    position: absolute;\n  }\n}"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/StackPlayers.scss":
+/***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/sidebar/Sidebar.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(true);
@@ -1801,14 +1846,14 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".center {\n  text-align: center; }\n\n.stackPlayer {\n  float: left;\n  position: relative; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACRD;EACE,YAAW;EACX,mBAAkB,EACnB","file":"StackPlayers.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../images/pitch.png');\n$player-gold: url('../images/large-gold-rare.png');\n$player-default: url('../images/player.png');\n$pitch-width: 100%;\n$pitch-height: 900px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}\n\n","@import \"constants\";\n\n\n.stackPlayer{\n  float: left;\n  position: relative;\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".sidebar-container {\n  float: right;\n  padding-left: 4px;\n  padding-right: 4px;\n  display: block;\n  width: 308px;\n  height: 900px;\n  background-color: white; }\n  .sidebar-container .formation-container .f442 {\n    background-image: url(" + __webpack_require__("./client/images/formations/442.png") + ");\n    width: 100px;\n    height: 135px; }\n  .sidebar-container .formation-container .f433 {\n    background-image: url(" + __webpack_require__("./client/images/formations/433-2.png") + ");\n    width: 100px;\n    height: 135px; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/sidebar/Sidebar.scss"],"names":[],"mappings":"AAAA;EACE,aAAY;EACZ,kBAAiB;EACjB,mBAAkB;EAClB,eAAc;EACd,aAAY;EACZ,cAAa;EACb,wBAAuB,EAgBxB;EAvBD;IAYM,gDAAwD;IACxD,aAAY;IACZ,cAAa,EACd;EAfL;IAiBM,gDAA0D;IAC1D,aAAY;IACZ,cAAa,EACd","file":"Sidebar.scss","sourcesContent":[".sidebar-container {\n  float: right;\n  padding-left: 4px;\n  padding-right: 4px;\n  display: block;\n  width: 308px;\n  height: 900px;\n  background-color: white;\n\n  .formation-container {\n\n    .f442 {\n      background-image: url(\"../../images/formations/442.png\");\n      width: 100px;\n      height: 135px;\n    }\n    .f433 {\n      background-image: url(\"../../images/formations/433-2.png\");\n      width: 100px;\n      height: 135px;\n    }\n\n  }\n}\n\n\n\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Stadium.scss":
+/***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/stackPlayers/StackPlayers.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(true);
@@ -1816,14 +1861,14 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".center {\n  text-align: center; }\n\n* {\n  box-sizing: border-box; }\n\n@font-face {\n  font-family: 'capsuularegular';\n  src: url(" + __webpack_require__("./client/fonts/Capsuula.woff") + ") format(\"woff\"), url(" + __webpack_require__("./client/fonts/Capsuula.ttf") + ") format(\"truetype\");\n  font-weight: normal;\n  font-style: normal; }\n\nbody {\n  font-family: capsuularegular;\n  background-image: url(" + __webpack_require__("./client/images/background-pattern.jpg") + "); }\n\n.container {\n  width: 1260px;\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px; }\n\n.container .stadium-container {\n    margin-right: auto;\n    margin-left: auto;\n    padding-left: 15px;\n    padding-right: 15px;\n    background-color: white; }\n\n.container .stadium {\n    background: url(" + __webpack_require__("./client/images/pitch.png") + ") no-repeat center;\n    width: 100%;\n    height: 900px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    position: relative; }\n\n.container .row {\n    display: table;\n    width: 100%; }\n\n.container .flexbox {\n    padding-left: 4px;\n    padding-right: 4px;\n    width: 922px;\n    float: left; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/Stadium.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACTD;EACE,uBAAsB,EACvB;;AAED;EACE,+BAA8B;EAC9B,oGAC+C;EAC/C,oBAAmB;EACnB,mBAAkB,EAAA;;AAIpB;EAEE,6BAA4B;EAC5B,gDAAyD,EAC1D;;AAED;EACE,cAAa;EACb,mBAAkB;EAClB,kBAAiB;EACjB,mBAAkB;EAClB,oBAAmB,EA6BpB;;AAlCD;IAQI,mBAAkB;IAClB,kBAAiB;IACjB,mBAAkB;IAClB,oBAAmB;IACnB,wBAAuB,EACxB;;AAbH;IAgBI,2DAA8C;IAC9C,YDjCc;ICkCd,cDjCgB;ICkChB,yBAAuB;QAAvB,sBAAuB;YAAvB,wBAAuB;IACvB,mBAAkB,EACnB;;AArBH;IAwBI,eAAc;IACd,YAAW,EACZ;;AA1BH;IA6BI,kBAAiB;IACjB,mBAAkB;IAClB,aAAY;IACZ,YAAW,EACZ","file":"Stadium.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../images/pitch.png');\n$player-gold: url('../images/large-gold-rare.png');\n$player-default: url('../images/player.png');\n$pitch-width: 100%;\n$pitch-height: 900px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}\n\n","@import 'constants';\n\n* {\n  box-sizing: border-box;\n}\n\n@font-face {\n  font-family: 'capsuularegular';\n  src: url('../fonts/Capsuula.woff') format('woff'),\n  url('../fonts/Capsuula.ttf') format('truetype');\n  font-weight: normal;\n  font-style: normal;\n\n}\n\nbody {\n  //background-color: #011433;\n  font-family: capsuularegular;\n  background-image: url(\"../images/background-pattern.jpg\");\n}\n\n.container {\n  width: 1260px;\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n\n  .stadium-container {\n    margin-right: auto;\n    margin-left: auto;\n    padding-left: 15px;\n    padding-right: 15px;\n    background-color: white;\n  }\n\n  .stadium {\n    background: $pitch-background no-repeat center;\n    width: $pitch-width;\n    height: $pitch-height;\n    justify-content: center;\n    position: relative;\n  }\n\n  .row {\n    display: table;\n    width: 100%;\n  }\n\n  .flexbox {\n    padding-left: 4px;\n    padding-right: 4px;\n    width: 922px;\n    float: left;\n  }\n}\n\n\n"],"sourceRoot":""}]);
+exports.push([module.i, ".center {\n  text-align: center; }\n\n.stackPlayer {\n  float: left;\n  position: relative; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/stackPlayers/StackPlayers.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACRD;EACE,YAAW;EACX,mBAAkB,EACnB","file":"StackPlayers.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../../images/pitch.png');\n$player-gold: url('../../images/large-gold-rare.png');\n$player-default: url('../../images/player.png');\n$pitch-width: 100%;\n$pitch-height: 900px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}\n\n","@import \"../constants\";\n\n\n.stackPlayer{\n  float: left;\n  position: relative;\n}"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/player.scss":
+/***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/stadium/stadium.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(true);
@@ -1831,7 +1876,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".center {\n  text-align: center; }\n\n#p11 {\n  top: 550px;\n  left: 390px; }\n\n#p10 {\n  top: 460px;\n  left: 780px; }\n\n#p9 {\n  top: 470px;\n  left: 546px; }\n\n#p8 {\n  top: 470px;\n  left: 235px; }\n\n#p7 {\n  top: 460px;\n  left: 5px; }\n\n#p6 {\n  top: 240px;\n  left: 605px; }\n\n#p5 {\n  top: 310px;\n  left: 390px; }\n\n#p4 {\n  top: 240px;\n  left: 175px; }\n\n#p3 {\n  top: 35px;\n  left: 691px; }\n\n#p2 {\n  top: 10px;\n  left: 390px; }\n\n#p1 {\n  top: 35px;\n  left: 90px; }\n\n.playerProfile {\n  background: url(" + __webpack_require__("./client/images/large-gold-rare.png") + ") no-repeat center;\n  background-size: 96%;\n  width: 134px;\n  height: 200px;\n  position: absolute; }\n\n.playerProfile .playerCard {\n    top: 27px;\n    left: 54px;\n    position: absolute; }\n\n.playerProfile .playerCard-picture {\n    background-size: contain;\n    background-image: url(" + __webpack_require__("./client/images/player.png") + ");\n    width: 74px;\n    height: 74px; }\n\n.playerProfile .playerName {\n    top: 98px;\n    position: absolute;\n    width: 100%; }\n\n.playerProfile .playerPosition {\n    display: block;\n    top: 147px;\n    width: 100%;\n    position: absolute; }\n\n.playerProfile .playerAge {\n    top: 131px;\n    width: 100%;\n    position: absolute; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/player.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACTD;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,UAAS,EACV;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,UAAS;EACT,YAAW,EACZ;;AAED;EACE,UAAS;EACT,YAAW,EACZ;;AAED;EACE,UAAS;EACT,WAAU,EACX;;AAED;EACE,2DAAyC;EACzC,qBAAoB;EACpB,aAAY;EACZ,cAAa;EACb,mBAAkB,EAgCnB;;AArCD;IAQI,UAAS;IACT,WAAU;IACV,mBAAkB,EAEnB;;AAZH;IAcI,yBAAwB;IACxB,gDDpEwC;ICqExC,YAAW;IACX,aAAY,EACb;;AAlBH;IAoBI,UAAS;IACT,mBAAkB;IAClB,YAAW,EACZ;;AAvBH;IA0BI,eAAc;IACd,WAAU;IACV,YAAW;IACX,mBAAkB,EACnB;;AA9BH;IAiCI,WAAU;IACV,YAAW;IACX,mBAAkB,EACnB","file":"player.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../images/pitch.png');\n$player-gold: url('../images/large-gold-rare.png');\n$player-default: url('../images/player.png');\n$pitch-width: 100%;\n$pitch-height: 900px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}\n\n","@import \"constants\";\n\n#p11 {\n  top: 550px;\n  left: 390px;\n}\n\n#p10 {\n  top: 460px;\n  left: 780px;\n}\n\n#p9 {\n  top: 470px;\n  left: 546px;\n}\n\n#p8 {\n  top: 470px;\n  left: 235px;\n}\n\n#p7 {\n  top: 460px;\n  left: 5px;\n}\n\n#p6 {\n  top: 240px;\n  left: 605px;\n}\n\n#p5 {\n  top: 310px;\n  left: 390px;\n}\n\n#p4 {\n  top: 240px;\n  left: 175px;\n}\n\n#p3 {\n  top: 35px;\n  left: 691px;\n}\n\n#p2 {\n  top: 10px;\n  left: 390px;\n}\n\n#p1 {\n  top: 35px;\n  left: 90px;\n}\n\n.playerProfile {\n  background: $player-gold no-repeat center;\n  background-size: 96%;\n  width: 134px;\n  height: 200px;\n  position: absolute;\n\n  .playerCard {\n    top: 27px;\n    left: 54px;\n    position: absolute;\n\n  }\n  .playerCard-picture {\n    background-size: contain;\n    background-image: $player-default;\n    width: 74px;\n    height: 74px;\n  }\n  .playerName {\n    top: 98px;\n    position: absolute;\n    width: 100%;\n  }\n\n  .playerPosition {\n    display: block;\n    top: 147px;\n    width: 100%;\n    position: absolute;\n  }\n\n  .playerAge {\n    top: 131px;\n    width: 100%;\n    position: absolute;\n  }\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".center {\n  text-align: center; }\n\n* {\n  box-sizing: border-box; }\n\n@font-face {\n  font-family: 'capsuularegular';\n  src: url(" + __webpack_require__("./client/fonts/Capsuula.woff") + ") format(\"woff\"), url(" + __webpack_require__("./client/fonts/Capsuula.ttf") + ") format(\"truetype\");\n  font-weight: normal;\n  font-style: normal; }\n\nbody {\n  font-family: capsuularegular;\n  background-image: url(" + __webpack_require__("./client/images/background-pattern.jpg") + "); }\n\n.container {\n  width: 1260px;\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px; }\n\n.container .stadium-container {\n    margin-right: auto;\n    margin-left: auto;\n    background-color: white; }\n\n.container .stadium {\n    background: url(" + __webpack_require__("./client/images/pitch.png") + ") no-repeat center;\n    width: 100%;\n    height: 900px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    position: relative; }\n\n.container .row {\n    display: table;\n    width: 100%; }\n\n.container .flexbox {\n    padding-left: 4px;\n    padding-right: 4px;\n    width: 922px;\n    float: left; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/stadium/stadium.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACTD;EACE,uBAAsB,EACvB;;AAED;EACE,+BAA8B;EAC9B,oGACkD;EAClD,oBAAmB;EACnB,mBAAkB,EAAA;;AAIpB;EACE,6BAA4B;EAC5B,gDAA4D,EAC7D;;AAED;EACE,cAAa;EACb,mBAAkB;EAClB,kBAAiB;EACjB,mBAAkB;EAClB,oBAAmB,EA2BpB;;AAhCD;IAQI,mBAAkB;IAClB,kBAAiB;IACjB,wBAAuB,EACxB;;AAXH;IAcI,2DAA8C;IAC9C,YD9Bc;IC+Bd,cD9BgB;IC+BhB,yBAAuB;QAAvB,sBAAuB;YAAvB,wBAAuB;IACvB,mBAAkB,EACnB;;AAnBH;IAsBI,eAAc;IACd,YAAW,EACZ;;AAxBH;IA2BI,kBAAiB;IACjB,mBAAkB;IAClB,aAAY;IACZ,YAAW,EACZ","file":"stadium.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../../images/pitch.png');\n$player-gold: url('../../images/large-gold-rare.png');\n$player-default: url('../../images/player.png');\n$pitch-width: 100%;\n$pitch-height: 900px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}\n\n","@import '../constants';\n\n* {\n  box-sizing: border-box;\n}\n\n@font-face {\n  font-family: 'capsuularegular';\n  src: url('../../fonts/Capsuula.woff') format('woff'),\n  url('../../fonts/Capsuula.ttf') format('truetype');\n  font-weight: normal;\n  font-style: normal;\n\n}\n\nbody {\n  font-family: capsuularegular;\n  background-image: url(\"../../images/background-pattern.jpg\");\n}\n\n.container {\n  width: 1260px;\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n\n  .stadium-container {\n    margin-right: auto;\n    margin-left: auto;\n    background-color: white;\n  }\n\n  .stadium {\n    background: $pitch-background no-repeat center;\n    width: $pitch-width;\n    height: $pitch-height;\n    justify-content: center;\n    position: relative;\n  }\n\n  .row {\n    display: table;\n    width: 100%;\n  }\n\n  .flexbox {\n    padding-left: 4px;\n    padding-right: 4px;\n    width: 922px;\n    float: left;\n  }\n}\n\n\n"],"sourceRoot":""}]);
 
 // exports
 

@@ -1,12 +1,14 @@
-import "./Stadium.scss";
+import "./stadium.scss";
 import React, {Component} from "react";
-import Player from "./Player";
-import squad from "./squadOne.json";
-import SideBar from "./Sidebar"
+import Player from "../player/player";
+import squad from "../squadOne.json";
+import SideBar from "../sidebar/Sidebar"
 export default class Stadium extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {formation: this.props.defaultFormation}
+        this.updateFormation = this.updateFormation.bind(this);
     }
 
     render() {
@@ -15,14 +17,18 @@ export default class Stadium extends Component {
                 <div className="row">
                     <div className="flexbox">
                         <div className="stadium-container">
-                            <div className="stadium center">
+                            <div className={"stadium center squad-"+ this.state.formation}>
                                 <LoadMainSquad squad={squad.players.main}/>
                             </div>
                         </div>
                     </div>
-                    <SideBar/>
+                    <SideBar defaultFormation={this.state.formation}  updateFormation={this.updateFormation}/>
                 </div>
             </div>);
+    }
+
+    updateFormation(newFormation){
+        this.setState({formation: newFormation});
     }
 }
 

@@ -1,8 +1,8 @@
 import "./StackPlayers.scss";
-import "./player.scss";
+import "../player/player.scss";
 import React, {Component} from "react";
-import squad from "./squadOne.json";
-import Player from "./Player";
+import squad from "../squadOne.json";
+import Player from "../player/player";
 export default class StackPlayers extends Component {
 
     constructor(props) {

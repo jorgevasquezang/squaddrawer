@@ -1,5 +1,5 @@
 import "ignore-styles";
-import Stadium from "../stadium";
+import Stadium from "../stadium/stadium";
 describe("Stadium Test", function () {
     it("Swap Sides home/Away", () => {
 
