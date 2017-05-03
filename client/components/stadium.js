@@ -2,21 +2,27 @@ import "./Stadium.scss";
 import React, {Component} from "react";
 import Player from "./Player";
 import squad from "./squadOne.json";
+import SideBar from "./Sidebar"
 export default class Stadium extends Component {
 
     constructor(props) {
         super(props);
     }
 
-    componentDidMount() {
-        console.log(squad.players.forwards);
-    }
-
-
     render() {
-        return (<div className="stadium center">
-                <LoadMainSquad squad={squad.players}/>
-        </div>);
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="flexbox">
+                        <div className="stadium-container">
+                            <div className="stadium center">
+                                <LoadMainSquad squad={squad.players.main}/>
+                            </div>
+                        </div>
+                    </div>
+                    <SideBar/>
+                </div>
+            </div>);
     }
 }
 

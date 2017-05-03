@@ -4,15 +4,52 @@
   box-sizing: border-box;
 }
 
-body {
-  //background-color: #011433;
+@font-face {
+  font-family: 'capsuularegular';
+  src: url('../fonts/Capsuula.woff') format('woff'),
+  url('../fonts/Capsuula.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
-.stadium {
-  background: $pitch-background no-repeat center;
-  width: $pitch-width;
-  height: $pitch-height;
-  position:  relative;
-  display: flex;
-  justify-content: center;
+body {
+  font-family: capsuularegular;
+  background-image: url("../images/background-pattern.jpg");
 }
+
+.container {
+  width: 1260px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .stadium-container {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+  }
+
+  .stadium {
+    background: $pitch-background no-repeat center;
+    width: $pitch-width;
+    height: $pitch-height;
+    justify-content: center;
+    position: relative;
+  }
+
+  .row {
+    display: table;
+    width: 100%;
+  }
+
+  .flexbox {
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 922px;
+    float: left;
+  }
+}
+
+

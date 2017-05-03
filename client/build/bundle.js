@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "17c86951602ff04e37ef"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "423f67793d5efa5f1fd2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -753,7 +753,7 @@ var Player = function (_Component) {
 
             return _react2.default.createElement(
                 "div",
-                { className: "playerProfile", key: player.id, id: 'p' + player.id },
+                { className: this.props.className ? 'playerProfile ' + this.props.className : 'playerProfile', id: this.props.id },
                 _react2.default.createElement(
                     "div",
                     { className: "playerCard" },
@@ -798,6 +798,108 @@ var _temp = function () {
 }();
 
 ;
+
+/***/ }),
+
+/***/ "./client/components/Sidebar.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__("./client/components/Sidebar.scss");
+
+var _react = __webpack_require__("./node_modules/react/react.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SideBar = function (_Component) {
+    _inherits(SideBar, _Component);
+
+    function SideBar(props) {
+        _classCallCheck(this, SideBar);
+
+        return _possibleConstructorReturn(this, (SideBar.__proto__ || Object.getPrototypeOf(SideBar)).call(this, props));
+    }
+
+    _createClass(SideBar, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "sidebar-container" },
+                _react2.default.createElement(
+                    "div",
+                    null,
+                    _react2.default.createElement(
+                        "h3",
+                        null,
+                        "Formaciones"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return SideBar;
+}(_react.Component);
+
+var _default = SideBar;
+exports.default = _default;
+;
+
+var _temp = function () {
+    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+        return;
+    }
+
+    __REACT_HOT_LOADER__.register(SideBar, "SideBar", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Sidebar.js");
+
+    __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/Sidebar.js");
+}();
+
+;
+
+/***/ }),
+
+/***/ "./client/components/Sidebar.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Sidebar.scss");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__("./node_modules/style-loader/addStyles.js")(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(true) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Sidebar.scss", function() {
+			var newContent = __webpack_require__("./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Sidebar.scss");
+			if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ }),
 
@@ -854,7 +956,7 @@ var SquadBuilder = function (_Component) {
                 _react2.default.createElement(
                     "h1",
                     { className: "center" },
-                    "Squad Drawer Alianza Lima"
+                    "Alianza Lima 2017"
                 ),
                 _react2.default.createElement(_Stadium2.default, null),
                 _react2.default.createElement(_StackPlayers2.default, null)
@@ -907,6 +1009,10 @@ var _squadOne = __webpack_require__("./client/components/squadOne.json");
 
 var _squadOne2 = _interopRequireDefault(_squadOne);
 
+var _Player = __webpack_require__("./client/components/Player.js");
+
+var _Player2 = _interopRequireDefault(_Player);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -914,8 +1020,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var ASSET_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/';
 
 var StackPlayers = function (_Component) {
     _inherits(StackPlayers, _Component);
@@ -942,7 +1046,7 @@ var StackPlayers = function (_Component) {
                     null,
                     "Substitutes"
                 ),
-                _react2.default.createElement(SubstitutePlayers, { players: _squadOne2.default.players })
+                _react2.default.createElement(BenchPlayers, { players: _squadOne2.default.players.bench })
             );
         }
     }]);
@@ -954,41 +1058,14 @@ var _default = StackPlayers;
 exports.default = _default;
 
 
-function SubstitutePlayers(_ref) {
+function BenchPlayers(_ref) {
     var players = _ref.players;
 
     return _react2.default.createElement(
         "div",
         null,
         players.map(function (player) {
-            return _react2.default.createElement(
-                "div",
-                { className: "playerProfile", key: player.name },
-                _react2.default.createElement(
-                    "div",
-                    { className: "playerCard" },
-                    _react2.default.createElement("img", { className: "playerCard-picture" })
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "wrapperDesc" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "playerName" },
-                        player.name
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "playerAge" },
-                        player.dob
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "playerPosition" },
-                        player.pos
-                    )
-                )
-            );
+            return _react2.default.createElement(_Player2.default, { player: player, key: player.id, className: "stackPlayer" });
         })
     );
 }
@@ -999,11 +1076,9 @@ var _temp = function () {
         return;
     }
 
-    __REACT_HOT_LOADER__.register(ASSET_URL, "ASSET_URL", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.js");
-
     __REACT_HOT_LOADER__.register(StackPlayers, "StackPlayers", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.js");
 
-    __REACT_HOT_LOADER__.register(SubstitutePlayers, "SubstitutePlayers", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.js");
+    __REACT_HOT_LOADER__.register(BenchPlayers, "BenchPlayers", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.js");
 
     __REACT_HOT_LOADER__.register(_default, "default", "/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.js");
 }();
@@ -1065,6 +1140,10 @@ var _squadOne = __webpack_require__("./client/components/squadOne.json");
 
 var _squadOne2 = _interopRequireDefault(_squadOne);
 
+var _Sidebar = __webpack_require__("./client/components/Sidebar.js");
+
+var _Sidebar2 = _interopRequireDefault(_Sidebar);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1092,8 +1171,25 @@ var Stadium = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                { className: "stadium center" },
-                _react2.default.createElement(LoadMainSquad, { squad: _squadOne2.default.players })
+                { className: "container" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "row" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "flexbox" },
+                        _react2.default.createElement(
+                            "div",
+                            { className: "stadium-container" },
+                            _react2.default.createElement(
+                                "div",
+                                { className: "stadium center" },
+                                _react2.default.createElement(LoadMainSquad, { squad: _squadOne2.default.players.main })
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(_Sidebar2.default, null)
+                )
             );
         }
     }]);
@@ -1112,7 +1208,7 @@ function LoadMainSquad(_ref) {
         "div",
         null,
         squad.map(function (player) {
-            return _react2.default.createElement(_Player2.default, { player: player, key: player.id });
+            return _react2.default.createElement(_Player2.default, { player: player, key: player.id, id: 'p' + player.id });
         })
     );
 }
@@ -1192,173 +1288,225 @@ if(true) {
 /***/ (function(module, exports) {
 
 module.exports = {
-	"players": [
-		{
-			"name": "Pizarro",
-			"asset": "bm-pizarro.jpg",
-			"origin": "Peru",
-			"height": "1.84m",
-			"shirt": "14",
-			"pos": "forward3",
-			"dob": "36",
-			"goals": 1,
-			"games": 16,
-			"x": 110,
-			"y": -190,
-			"id": 1
-		},
-		{
-			"name": "Robben",
-			"asset": "bm-robben.png",
-			"origin": "Holland",
-			"height": "1.80m",
-			"shirt": "10",
-			"pos": "Forward",
-			"class": "forward2",
-			"dob": "32",
-			"goals": 19,
-			"games": 30,
-			"x": -110,
-			"y": -190,
-			"id": 2
-		},
-		{
-			"name": "Rilbery",
-			"asset": "bm-rilbery.jpg",
-			"origin": "France",
-			"height": "1.70m",
-			"shirt": "7",
-			"pos": "Midfield",
-			"class": "midfield2",
-			"dob": "32",
-			"goals": 9,
-			"games": 22,
-			"x": 150,
-			"y": 50,
-			"id": 3
-		},
-		{
-			"name": "Schweinsteiger",
-			"asset": "bm-schweinsteiger.jpg",
-			"origin": "Germany",
-			"height": "1.87m",
-			"shirt": "24",
-			"pos": "Forward",
-			"class": "forward1",
-			"dob": "31",
-			"goals": 21,
-			"games": 3,
-			"x": 0,
-			"y": 100,
-			"id": 4
-		},
-		{
-			"name": "Martinez",
-			"asset": "bm-martinez.jpg",
-			"origin": "Spain",
-			"height": "1.90m",
-			"shirt": "8",
-			"pos": "Midfield",
-			"class": "midfield1",
-			"dob": "28",
-			"goals": 0,
-			"games": 2,
-			"x": -150,
-			"y": 50,
-			"id": 5
-		},
-		{
-			"name": "Alaba",
-			"asset": "bm-alaba.jpg",
-			"origin": "Austria",
-			"height": "1.80m",
-			"shirt": "27",
-			"pos": "Defence",
-			"class": "defenceC2",
-			"dob": "24",
-			"goals": 5,
-			"games": 27,
-			"x": -200,
-			"y": 180,
-			"id": 6
-		},
-		{
-			"name": "Lahm",
-			"asset": "bm-lahm.jpg",
-			"origin": "Germany",
-			"height": "1.70",
-			"shirt": "21",
-			"pos": "Defence",
-			"class": "defenceC1",
-			"dob": "32",
-			"goals": 2,
-			"games": 25,
-			"x": 200,
-			"y": 180,
-			"id": 7
-		},
-		{
-			"name": "Benatia",
-			"asset": "bm-benatia.jpg",
-			"origin": "France",
-			"height": "1.87m",
-			"shirt": "5",
-			"pos": "Defence",
-			"class": "defenceR",
-			"dob": "31",
-			"goals": 21,
-			"games": 1,
-			"x": 100,
-			"y": 300,
-			"id": 8
-		},
-		{
-			"name": "Dante",
-			"asset": "bm-dante.jpg",
-			"origin": "Brazil",
-			"height": "1.87m",
-			"shirt": "4",
-			"pos": "Defence",
-			"class": "defenceL",
-			"dob": "32",
-			"goals": 0,
-			"games": 34,
-			"x": -100,
-			"y": 300,
-			"id": 9
-		},
-		{
-			"name": "Dante1",
-			"asset": "bm-dante.jpg",
-			"origin": "Brazil",
-			"height": "1.87m",
-			"shirt": "4",
-			"pos": "Defence",
-			"class": "defenceL",
-			"dob": "32",
-			"goals": 0,
-			"games": 34,
-			"x": -100,
-			"y": 300,
-			"id": 10
-		},
-		{
-			"name": "Neuer",
-			"asset": "bm-neuer.jpg",
-			"origin": "Germany",
-			"height": "1.93m",
-			"shirt": "1",
-			"pos": "Goalkeeper",
-			"class": "goalkeeper",
-			"dob": "29",
-			"goals": 0,
-			"games": 48,
-			"x": 0,
-			"y": 410,
-			"id": 11
-		}
-	]
+	"players": {
+		"main": [
+			{
+				"name": "A. Hohberg",
+				"asset": "bm-pizarro.jpg",
+				"origin": "Peru",
+				"height": "1.84m",
+				"shirt": "14",
+				"pos": "forward3",
+				"dob": "36",
+				"goals": 1,
+				"games": 16,
+				"x": 110,
+				"y": -190,
+				"id": 1
+			},
+			{
+				"name": "K Quevedo",
+				"asset": "bm-robben.png",
+				"origin": "Holland",
+				"height": "1.80m",
+				"shirt": "10",
+				"pos": "Forward",
+				"class": "forward2",
+				"dob": "32",
+				"goals": 19,
+				"games": 30,
+				"x": -110,
+				"y": -190,
+				"id": 2
+			},
+			{
+				"name": "G. Pacheco",
+				"asset": "bm-alaba.jpg",
+				"origin": "Austria",
+				"height": "1.80m",
+				"shirt": "27",
+				"pos": "Defence",
+				"class": "defenceC2",
+				"dob": "24",
+				"goals": 5,
+				"games": 27,
+				"x": -200,
+				"y": 180,
+				"id": 3
+			},
+			{
+				"name": "R. Cruzado",
+				"asset": "bm-rilbery.jpg",
+				"origin": "France",
+				"height": "1.70m",
+				"shirt": "7",
+				"pos": "Midfield",
+				"class": "midfield2",
+				"dob": "32",
+				"goals": 9,
+				"games": 22,
+				"x": 150,
+				"y": 50,
+				"id": 4
+			},
+			{
+				"name": "A. Fuentes",
+				"asset": "bm-schweinsteiger.jpg",
+				"origin": "Germany",
+				"height": "1.87m",
+				"shirt": "24",
+				"pos": "Forward",
+				"class": "forward1",
+				"dob": "31",
+				"goals": 21,
+				"games": 3,
+				"x": 0,
+				"y": 100,
+				"id": 5
+			},
+			{
+				"name": "L. Aguiar",
+				"asset": "bm-martinez.jpg",
+				"origin": "Spain",
+				"height": "1.90m",
+				"shirt": "8",
+				"pos": "Midfield",
+				"class": "midfield1",
+				"dob": "28",
+				"goals": 0,
+				"games": 2,
+				"x": -150,
+				"y": 50,
+				"id": 6
+			},
+			{
+				"name": "F. Duclos",
+				"asset": "bm-lahm.jpg",
+				"origin": "Germany",
+				"height": "1.70",
+				"shirt": "21",
+				"pos": "Defence",
+				"class": "defenceC1",
+				"dob": "32",
+				"goals": 2,
+				"games": 25,
+				"x": 200,
+				"y": 180,
+				"id": 7
+			},
+			{
+				"name": "G. Godoy",
+				"asset": "bm-benatia.jpg",
+				"origin": "France",
+				"height": "1.87m",
+				"shirt": "5",
+				"pos": "Defence",
+				"class": "defenceR",
+				"dob": "31",
+				"goals": 21,
+				"games": 1,
+				"x": 100,
+				"y": 300,
+				"id": 8
+			},
+			{
+				"name": "M. Araujo",
+				"asset": "bm-dante.jpg",
+				"origin": "Brazil",
+				"height": "1.87m",
+				"shirt": "4",
+				"pos": "Defence",
+				"class": "defenceL",
+				"dob": "32",
+				"goals": 0,
+				"games": 34,
+				"x": -100,
+				"y": 300,
+				"id": 9
+			},
+			{
+				"name": "H. Riojas",
+				"asset": "bm-dante.jpg",
+				"origin": "Brazil",
+				"height": "1.87m",
+				"shirt": "4",
+				"pos": "Defence",
+				"class": "defenceL",
+				"dob": "32",
+				"goals": 0,
+				"games": 34,
+				"x": -100,
+				"y": 300,
+				"id": 10
+			},
+			{
+				"name": "L. Butron",
+				"asset": "bm-neuer.jpg",
+				"origin": "Peru",
+				"height": "1.85m",
+				"shirt": "1",
+				"pos": "Portero",
+				"age": "29",
+				"goals": 0,
+				"games": 48,
+				"x": 0,
+				"y": 410,
+				"id": 11
+			}
+		],
+		"bench": [
+			{
+				"name": "Cachito",
+				"asset": "bm-neuer.jpg",
+				"origin": "Peru",
+				"height": "1.85m",
+				"shirt": "1",
+				"pos": "Portero",
+				"age": "29",
+				"goals": 0,
+				"games": 48,
+				"x": 0,
+				"y": 410,
+				"id": 11
+			},
+			{
+				"name": "Vilchez",
+				"asset": "bm-neuer.jpg",
+				"origin": "Peru",
+				"height": "1.85m",
+				"shirt": "1",
+				"pos": "Portero",
+				"age": "29",
+				"goals": 0,
+				"games": 48,
+				"x": 0,
+				"y": 410,
+				"id": 12
+			}
+		]
+	}
 };
+
+/***/ }),
+
+/***/ "./client/fonts/Capsuula.ttf":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/fonts/Capsuula.ttf";
+
+/***/ }),
+
+/***/ "./client/fonts/Capsuula.woff":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/fonts/Capsuula.woff";
+
+/***/ }),
+
+/***/ "./client/images/background-pattern.jpg":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/images/background-pattern.jpg";
 
 /***/ }),
 
@@ -1630,6 +1778,21 @@ module.exports = function () {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/Sidebar.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(true);
+// imports
+
+
+// module
+exports.push([module.i, ".sidebar-container {\n  float: right;\n  padding-left: 4px;\n  padding-right: 4px;\n  display: block;\n  width: 308px;\n  background-color: white; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/Sidebar.scss"],"names":[],"mappings":"AAAA;EACE,aAAY;EACZ,kBAAiB;EACjB,mBAAkB;EAClB,eAAc;EACd,aAAY;EACZ,wBAAuB,EACxB","file":"Sidebar.scss","sourcesContent":[".sidebar-container {\n  float: right;\n  padding-left: 4px;\n  padding-right: 4px;\n  display: block;\n  width: 308px;\n  background-color: white;\n}"],"sourceRoot":""}]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?{\"importLoaders\":1,\"sourceMap\":true}!./node_modules/postcss-loader/index.js!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":true}!./client/components/StackPlayers.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1638,7 +1801,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".center {\n  text-align: center; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB","file":"StackPlayers.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../images/pitch.png');\n$player-gold: url('../images/large-gold-rare.png');\n$player-default: url('../images/player.png');\n$pitch-width: 910px;\n$pitch-height: 747px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".center {\n  text-align: center; }\n\n.stackPlayer {\n  float: left;\n  position: relative; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/StackPlayers.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACRD;EACE,YAAW;EACX,mBAAkB,EACnB","file":"StackPlayers.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../images/pitch.png');\n$player-gold: url('../images/large-gold-rare.png');\n$player-default: url('../images/player.png');\n$pitch-width: 100%;\n$pitch-height: 900px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}\n\n","@import \"constants\";\n\n\n.stackPlayer{\n  float: left;\n  position: relative;\n}"],"sourceRoot":""}]);
 
 // exports
 
@@ -1653,7 +1816,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".center {\n  text-align: center; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  background-color: #011433; }\n\n.stadium {\n  background: url(" + __webpack_require__("./client/images/pitch.png") + ") no-repeat center;\n  width: 910px;\n  height: 747px;\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/Stadium.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACTD;EACE,uBAAsB,EACvB;;AAED;EACE,0BAAyB,EAC1B;;AAED;EACE,2DAA8C;EAC9C,aDPiB;ECQjB,cDPkB;ECQlB,mBAAmB;EACnB,qBAAa;EAAb,qBAAa;EAAb,cAAa;EACb,yBAAuB;MAAvB,sBAAuB;UAAvB,wBAAuB,EACxB","file":"Stadium.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../images/pitch.png');\n$player-gold: url('../images/large-gold-rare.png');\n$player-default: url('../images/player.png');\n$pitch-width: 910px;\n$pitch-height: 747px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}","@import 'constants';\n\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  background-color: #011433;\n}\n\n.stadium {\n  background: $pitch-background no-repeat center;\n  width: $pitch-width;\n  height: $pitch-height;\n  position:  relative;\n  display: flex;\n  justify-content: center;\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".center {\n  text-align: center; }\n\n* {\n  box-sizing: border-box; }\n\n@font-face {\n  font-family: 'capsuularegular';\n  src: url(" + __webpack_require__("./client/fonts/Capsuula.woff") + ") format(\"woff\"), url(" + __webpack_require__("./client/fonts/Capsuula.ttf") + ") format(\"truetype\");\n  font-weight: normal;\n  font-style: normal; }\n\nbody {\n  font-family: capsuularegular;\n  background-image: url(" + __webpack_require__("./client/images/background-pattern.jpg") + "); }\n\n.container {\n  width: 1260px;\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px; }\n\n.container .stadium-container {\n    margin-right: auto;\n    margin-left: auto;\n    padding-left: 15px;\n    padding-right: 15px;\n    background-color: white; }\n\n.container .stadium {\n    background: url(" + __webpack_require__("./client/images/pitch.png") + ") no-repeat center;\n    width: 100%;\n    height: 900px;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    position: relative; }\n\n.container .row {\n    display: table;\n    width: 100%; }\n\n.container .flexbox {\n    padding-left: 4px;\n    padding-right: 4px;\n    width: 922px;\n    float: left; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/Stadium.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACTD;EACE,uBAAsB,EACvB;;AAED;EACE,+BAA8B;EAC9B,oGAC+C;EAC/C,oBAAmB;EACnB,mBAAkB,EAAA;;AAIpB;EAEE,6BAA4B;EAC5B,gDAAyD,EAC1D;;AAED;EACE,cAAa;EACb,mBAAkB;EAClB,kBAAiB;EACjB,mBAAkB;EAClB,oBAAmB,EA6BpB;;AAlCD;IAQI,mBAAkB;IAClB,kBAAiB;IACjB,mBAAkB;IAClB,oBAAmB;IACnB,wBAAuB,EACxB;;AAbH;IAgBI,2DAA8C;IAC9C,YDjCc;ICkCd,cDjCgB;ICkChB,yBAAuB;QAAvB,sBAAuB;YAAvB,wBAAuB;IACvB,mBAAkB,EACnB;;AArBH;IAwBI,eAAc;IACd,YAAW,EACZ;;AA1BH;IA6BI,kBAAiB;IACjB,mBAAkB;IAClB,aAAY;IACZ,YAAW,EACZ","file":"Stadium.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../images/pitch.png');\n$player-gold: url('../images/large-gold-rare.png');\n$player-default: url('../images/player.png');\n$pitch-width: 100%;\n$pitch-height: 900px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}\n\n","@import 'constants';\n\n* {\n  box-sizing: border-box;\n}\n\n@font-face {\n  font-family: 'capsuularegular';\n  src: url('../fonts/Capsuula.woff') format('woff'),\n  url('../fonts/Capsuula.ttf') format('truetype');\n  font-weight: normal;\n  font-style: normal;\n\n}\n\nbody {\n  //background-color: #011433;\n  font-family: capsuularegular;\n  background-image: url(\"../images/background-pattern.jpg\");\n}\n\n.container {\n  width: 1260px;\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n\n  .stadium-container {\n    margin-right: auto;\n    margin-left: auto;\n    padding-left: 15px;\n    padding-right: 15px;\n    background-color: white;\n  }\n\n  .stadium {\n    background: $pitch-background no-repeat center;\n    width: $pitch-width;\n    height: $pitch-height;\n    justify-content: center;\n    position: relative;\n  }\n\n  .row {\n    display: table;\n    width: 100%;\n  }\n\n  .flexbox {\n    padding-left: 4px;\n    padding-right: 4px;\n    width: 922px;\n    float: left;\n  }\n}\n\n\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -1668,7 +1831,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".center {\n  text-align: center; }\n\n#p11 {\n  top: 550px;\n  left: 390px; }\n\n#p10 {\n  top: 460px;\n  left: 780px; }\n\n#p9 {\n  top: 470px;\n  left: 546px; }\n\n#p8 {\n  top: 470px;\n  left: 235px; }\n\n#p7 {\n  top: 460px;\n  left: 5px; }\n\n#p6 {\n  top: 240px;\n  left: 605px; }\n\n#p5 {\n  top: 310px;\n  left: 390px; }\n\n#p4 {\n  top: 240px;\n  left: 175px; }\n\n#p3 {\n  top: 35px;\n  left: 691px; }\n\n#p2 {\n  top: 10px;\n  left: 390px; }\n\n#p1 {\n  top: 35px;\n  left: 90px; }\n\n.playerProfile {\n  background: url(" + __webpack_require__("./client/images/large-gold-rare.png") + ") no-repeat center;\n  background-size: 96%;\n  width: 134px;\n  height: 200px;\n  position: absolute; }\n\n.playerProfile .playerCard {\n    top: 27px;\n    left: 54px;\n    position: absolute; }\n\n.playerProfile .playerCard-picture {\n    background-size: contain;\n    background-image: url(" + __webpack_require__("./client/images/player.png") + ");\n    width: 74px;\n    height: 74px; }\n\n.playerProfile .playerName {\n    top: 98px;\n    position: absolute;\n    width: 100%; }\n\n.playerProfile .playerPosition {\n    display: block;\n    top: 147px;\n    width: 100%;\n    position: absolute; }\n\n.playerProfile .playerAge {\n    top: 131px;\n    width: 100%;\n    position: absolute; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/player.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACTD;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,UAAS,EACV;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,UAAS;EACT,YAAW,EACZ;;AAED;EACE,UAAS;EACT,YAAW,EACZ;;AAED;EACE,UAAS;EACT,WAAU,EACX;;AAED;EACE,2DAAyC;EACzC,qBAAoB;EACpB,aAAY;EACZ,cAAa;EACb,mBAAkB,EAgCnB;;AArCD;IAQI,UAAS;IACT,WAAU;IACV,mBAAkB,EAEnB;;AAZH;IAcI,yBAAwB;IACxB,gDDpEwC;ICqExC,YAAW;IACX,aAAY,EACb;;AAlBH;IAoBI,UAAS;IACT,mBAAkB;IAClB,YAAW,EACZ;;AAvBH;IA0BI,eAAc;IACd,WAAU;IACV,YAAW;IACX,mBAAkB,EACnB;;AA9BH;IAiCI,WAAU;IACV,YAAW;IACX,mBAAkB,EACnB","file":"player.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../images/pitch.png');\n$player-gold: url('../images/large-gold-rare.png');\n$player-default: url('../images/player.png');\n$pitch-width: 910px;\n$pitch-height: 747px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}","@import \"constants\";\n\n#p11 {\n  top: 550px;\n  left: 390px;\n}\n\n#p10 {\n  top: 460px;\n  left: 780px;\n}\n\n#p9 {\n  top: 470px;\n  left: 546px;\n}\n\n#p8 {\n  top: 470px;\n  left: 235px;\n}\n\n#p7 {\n  top: 460px;\n  left: 5px;\n}\n\n#p6 {\n  top: 240px;\n  left: 605px;\n}\n\n#p5 {\n  top: 310px;\n  left: 390px;\n}\n\n#p4 {\n  top: 240px;\n  left: 175px;\n}\n\n#p3 {\n  top: 35px;\n  left: 691px;\n}\n\n#p2 {\n  top: 10px;\n  left: 390px;\n}\n\n#p1 {\n  top: 35px;\n  left: 90px;\n}\n\n.playerProfile {\n  background: $player-gold no-repeat center;\n  background-size: 96%;\n  width: 134px;\n  height: 200px;\n  position: absolute;\n\n  .playerCard {\n    top: 27px;\n    left: 54px;\n    position: absolute;\n\n  }\n  .playerCard-picture {\n    background-size: contain;\n    background-image: $player-default;\n    width: 74px;\n    height: 74px;\n  }\n  .playerName {\n    top: 98px;\n    position: absolute;\n    width: 100%;\n  }\n\n  .playerPosition {\n    display: block;\n    top: 147px;\n    width: 100%;\n    position: absolute;\n  }\n\n  .playerAge {\n    top: 131px;\n    width: 100%;\n    position: absolute;\n  }\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".center {\n  text-align: center; }\n\n#p11 {\n  top: 550px;\n  left: 390px; }\n\n#p10 {\n  top: 460px;\n  left: 780px; }\n\n#p9 {\n  top: 470px;\n  left: 546px; }\n\n#p8 {\n  top: 470px;\n  left: 235px; }\n\n#p7 {\n  top: 460px;\n  left: 5px; }\n\n#p6 {\n  top: 240px;\n  left: 605px; }\n\n#p5 {\n  top: 310px;\n  left: 390px; }\n\n#p4 {\n  top: 240px;\n  left: 175px; }\n\n#p3 {\n  top: 35px;\n  left: 691px; }\n\n#p2 {\n  top: 10px;\n  left: 390px; }\n\n#p1 {\n  top: 35px;\n  left: 90px; }\n\n.playerProfile {\n  background: url(" + __webpack_require__("./client/images/large-gold-rare.png") + ") no-repeat center;\n  background-size: 96%;\n  width: 134px;\n  height: 200px;\n  position: absolute; }\n\n.playerProfile .playerCard {\n    top: 27px;\n    left: 54px;\n    position: absolute; }\n\n.playerProfile .playerCard-picture {\n    background-size: contain;\n    background-image: url(" + __webpack_require__("./client/images/player.png") + ");\n    width: 74px;\n    height: 74px; }\n\n.playerProfile .playerName {\n    top: 98px;\n    position: absolute;\n    width: 100%; }\n\n.playerProfile .playerPosition {\n    display: block;\n    top: 147px;\n    width: 100%;\n    position: absolute; }\n\n.playerProfile .playerAge {\n    top: 131px;\n    width: 100%;\n    position: absolute; }\n", "", {"version":3,"sources":["/Users/jorgevasquezang/workspace/squaddrawer/client/components/constants.scss","/Users/jorgevasquezang/workspace/squaddrawer/client/components/player.scss"],"names":[],"mappings":"AASA;EACI,mBAAkB,EACrB;;ACTD;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,UAAS,EACV;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,WAAU;EACV,YAAW,EACZ;;AAED;EACE,UAAS;EACT,YAAW,EACZ;;AAED;EACE,UAAS;EACT,YAAW,EACZ;;AAED;EACE,UAAS;EACT,WAAU,EACX;;AAED;EACE,2DAAyC;EACzC,qBAAoB;EACpB,aAAY;EACZ,cAAa;EACb,mBAAkB,EAgCnB;;AArCD;IAQI,UAAS;IACT,WAAU;IACV,mBAAkB,EAEnB;;AAZH;IAcI,yBAAwB;IACxB,gDDpEwC;ICqExC,YAAW;IACX,aAAY,EACb;;AAlBH;IAoBI,UAAS;IACT,mBAAkB;IAClB,YAAW,EACZ;;AAvBH;IA0BI,eAAc;IACd,WAAU;IACV,YAAW;IACX,mBAAkB,EACnB;;AA9BH;IAiCI,WAAU;IACV,YAAW;IACX,mBAAkB,EACnB","file":"player.scss","sourcesContent":["$player-width: 100px;\n$player-height: 100px;\n$pitch-background: url('../images/pitch.png');\n$player-gold: url('../images/large-gold-rare.png');\n$player-default: url('../images/player.png');\n$pitch-width: 100%;\n$pitch-height: 900px;\n$quantity-players: 11;\n\n.center{\n    text-align: center;\n}\n\n","@import \"constants\";\n\n#p11 {\n  top: 550px;\n  left: 390px;\n}\n\n#p10 {\n  top: 460px;\n  left: 780px;\n}\n\n#p9 {\n  top: 470px;\n  left: 546px;\n}\n\n#p8 {\n  top: 470px;\n  left: 235px;\n}\n\n#p7 {\n  top: 460px;\n  left: 5px;\n}\n\n#p6 {\n  top: 240px;\n  left: 605px;\n}\n\n#p5 {\n  top: 310px;\n  left: 390px;\n}\n\n#p4 {\n  top: 240px;\n  left: 175px;\n}\n\n#p3 {\n  top: 35px;\n  left: 691px;\n}\n\n#p2 {\n  top: 10px;\n  left: 390px;\n}\n\n#p1 {\n  top: 35px;\n  left: 90px;\n}\n\n.playerProfile {\n  background: $player-gold no-repeat center;\n  background-size: 96%;\n  width: 134px;\n  height: 200px;\n  position: absolute;\n\n  .playerCard {\n    top: 27px;\n    left: 54px;\n    position: absolute;\n\n  }\n  .playerCard-picture {\n    background-size: contain;\n    background-image: $player-default;\n    width: 74px;\n    height: 74px;\n  }\n  .playerName {\n    top: 98px;\n    position: absolute;\n    width: 100%;\n  }\n\n  .playerPosition {\n    display: block;\n    top: 147px;\n    width: 100%;\n    position: absolute;\n  }\n\n  .playerAge {\n    top: 131px;\n    width: 100%;\n    position: absolute;\n  }\n}"],"sourceRoot":""}]);
 
 // exports
 

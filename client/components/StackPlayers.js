@@ -3,7 +3,6 @@ import "./player.scss";
 import React, {Component} from "react";
 import squad from "./squadOne.json";
 import Player from "./Player";
-const ASSET_URL = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/215059/';
 export default class StackPlayers extends Component {
 
     constructor(props) {
@@ -17,14 +16,14 @@ export default class StackPlayers extends Component {
         return (
             <div className="stackPlayers">
                 <h2>Substitutes</h2>
-                    <SubstitutePlayers players={squad.players}/>
+                    <BenchPlayers players={squad.players.bench}/>
             </div>
         )
     }
 
 }
 
-function SubstitutePlayers({players}) {
+function BenchPlayers({players}) {
     return (
         <div>
             {

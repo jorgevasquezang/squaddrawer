@@ -53,10 +53,17 @@ module.exports = {
                     ]
             },
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(jpg|png)$/,
                 loader: 'file-loader',
                 options: {
                     name: '/images/[name].[ext]'
+                }
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader',
+                options: {
+                  name:'/fonts/[name].[ext]'
                 }
             }
 
