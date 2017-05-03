@@ -121,6 +121,7 @@
   height: 200px;
   position: absolute;
   text-align: center;
+  cursor: hand;
 
   .playerCard {
     top: 27px;
@@ -137,6 +138,7 @@
   .playerName {
     top: 98px;
     position: absolute;
+    font-weight: bold;
     width: 100%;
   }
 
@@ -145,11 +147,20 @@
     top: 147px;
     width: 100%;
     position: absolute;
+    font-weight: bold;
   }
 
   .playerAge {
     top: 131px;
     width: 100%;
     position: absolute;
+    font-weight: bold;
+  }
+  .changePlayer-hidden {
+    display: none;
+  }
+
+  .changePlayer {
+    display: inherit;
   }
 }

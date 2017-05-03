@@ -30,7 +30,6 @@ export default class SideBar extends Component {
     }
 
     changeFormation(event) {
-        console.log('changing state old state'+this.state.formation);
         var formationValue = event.nativeEvent.target.value;
         this.setState({formation: formationValue});
         this.props.updateFormation(formationValue);

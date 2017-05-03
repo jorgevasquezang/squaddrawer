@@ -7,13 +7,10 @@
         "origin": "Peru",
         "height": "1.84m",
         "shirt": "14",
-        "pos": "Forward",
-        "pos": "forward3",
+        "pos": "Delantero",
         "dob": "36",
         "goals": 1,
         "games": 16,
-        "x": 110,
-        "y": -190,
         "id": 1
       },
       {
@@ -22,13 +19,10 @@
         "origin": "Holland",
         "height": "1.80m",
         "shirt": "10",
-        "pos": "Forward",
-        "class": "forward2",
+        "pos": "Delantero",
         "dob": "32",
         "goals": 19,
         "games": 30,
-        "x": -110,
-        "y": -190,
         "id": 2
       },
       {
@@ -37,13 +31,10 @@
         "origin": "Austria",
         "height": "1.80m",
         "shirt": "27",
-        "pos": "Defence",
-        "class": "defenceC2",
+        "pos": "Delantero",
         "dob": "24",
         "goals": 5,
         "games": 27,
-        "x": -200,
-        "y": 180,
         "id": 3
       },
       {
@@ -52,13 +43,10 @@
         "origin": "France",
         "height": "1.70m",
         "shirt": "7",
-        "pos": "Midfield",
-        "class": "midfield2",
+        "pos": "Medio Campo",
         "dob": "32",
         "goals": 9,
         "games": 22,
-        "x": 150,
-        "y": 50,
         "id": 4
       },
       {
@@ -67,13 +55,10 @@
         "origin": "Germany",
         "height": "1.87m",
         "shirt": "24",
-        "pos": "Forward",
-        "class": "forward1",
+        "pos": "Medio Campo",
         "dob": "31",
         "goals": 21,
         "games": 3,
-        "x": 0,
-        "y": 100,
         "id": 5
       },
       {
@@ -82,13 +67,10 @@
         "origin": "Spain",
         "height": "1.90m",
         "shirt": "8",
-        "pos": "Midfield",
-        "class": "midfield1",
+        "pos": "Medio Campo",
         "dob": "28",
         "goals": 0,
         "games": 2,
-        "x": -150,
-        "y": 50,
         "id": 6
       },
       {
@@ -97,13 +79,10 @@
         "origin": "Germany",
         "height": "1.70",
         "shirt": "21",
-        "pos": "Defence",
-        "class": "defenceC1",
+        "pos": "Defensa",
         "dob": "32",
         "goals": 2,
         "games": 25,
-        "x": 200,
-        "y": 180,
         "id": 7
       },
       {
@@ -112,13 +91,10 @@
         "origin": "France",
         "height": "1.87m",
         "shirt": "5",
-        "pos": "Defence",
-        "class": "defenceR",
+        "pos": "Defensa",
         "dob": "31",
         "goals": 21,
         "games": 1,
-        "x": 100,
-        "y": 300,
         "id": 8
       },
       {
@@ -127,13 +103,10 @@
         "origin": "Brazil",
         "height": "1.87m",
         "shirt": "4",
-        "pos": "Defence",
-        "class": "defenceL",
+        "pos": "Defensa",
         "dob": "32",
         "goals": 0,
         "games": 34,
-        "x": -100,
-        "y": 300,
         "id": 9
       },
       {
@@ -142,13 +115,10 @@
         "origin": "Brazil",
         "height": "1.87m",
         "shirt": "4",
-        "pos": "Defence",
-        "class": "defenceL",
+        "pos": "Defensa",
         "dob": "32",
         "goals": 0,
         "games": 34,
-        "x": -100,
-        "y": 300,
         "id": 10
       },
       {
@@ -161,8 +131,6 @@
         "age": "29",
         "goals": 0,
         "games": 48,
-        "x": 0,
-        "y": 410,
         "id": 11
       }
     ],
@@ -177,8 +145,6 @@
         "age": "29",
         "goals": 0,
         "games": 48,
-        "x": 0,
-        "y": 410,
         "id": 11
       },
       {
@@ -191,8 +157,6 @@
         "age": "29",
         "goals": 0,
         "games": 48,
-        "x": 0,
-        "y": 410,
         "id": 12
       }
     ]
