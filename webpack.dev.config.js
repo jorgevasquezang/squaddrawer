@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: [
         'react-hot-loader/patch',
@@ -78,6 +79,8 @@ module.exports = {
 
         new webpack.NoEmitOnErrorsPlugin(),
         // do not emit compiled assets that include errors
+
+        new HtmlWebpackPlugin()
     ],
     devServer: {
         port: 3000,
