@@ -80,7 +80,10 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin(),
         // do not emit compiled assets that include errors
 
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template:'client/index.html'
+
+        })
     ],
     devServer: {
         port: 3000,

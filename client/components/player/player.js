@@ -15,7 +15,7 @@ export default class Player extends Component {
             <div className={this.props.className ? 'playerProfile ' + this.props.className : 'playerProfile'}
                  id={this.props.id} onClick={this.changePlayer}>
                 <div className="playerCard">
-                    <img className="playerCard-picture"/>
+                    <div className="playerCard-picture"/>
                 </div>
                 <div className="playerName">{player.name}</div>
                 {/*<div className="playerAge">{player.dob}</div>*/}

@@ -13,7 +13,7 @@ export default class Stadium extends Component {
 
     render() {
         return (
-            <div className="container">
+
                 <div className="row">
                     <div className="flexbox">
                         <div className="stadium-container">
@@ -24,7 +24,7 @@ export default class Stadium extends Component {
                     </div>
                     <SideBar defaultFormation={this.state.formation}  updateFormation={this.updateFormation}/>
                 </div>
-            </div>);
+           );
     }
 
     updateFormation(newFormation){

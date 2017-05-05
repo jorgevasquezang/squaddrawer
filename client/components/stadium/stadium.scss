@@ -13,9 +13,19 @@
 
 }
 
+@font-face {
+  font-family: 'DINPro';
+  src: url('../../fonts/DINPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   font-family: capsuularegular;
   background-image: url("../../images/background-pattern.jpg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .container {

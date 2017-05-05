@@ -115,8 +115,10 @@
 }
 
 .playerProfile {
-  background: $player-gold no-repeat center;
+  font-family: DINPro;
+  background: $player-toty no-repeat center;
   background-size: 96%;
+  color: #d0c075;
   width: 134px;
   height: 200px;
   position: absolute;
@@ -147,14 +149,12 @@
     top: 147px;
     width: 100%;
     position: absolute;
-    font-weight: bold;
   }
 
   .playerAge {
     top: 131px;
     width: 100%;
     position: absolute;
-    font-weight: bold;
   }
   .changePlayer-hidden {
     display: none;

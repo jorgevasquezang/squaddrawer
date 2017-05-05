@@ -15,7 +15,7 @@ export default class StackPlayers extends Component {
     render() {
         return (
             <div className="stackPlayers">
-                <h2>Substitutes</h2>
+                <h2>Sustitutos</h2>
                     <BenchPlayers players={squad.players.bench}/>
             </div>
         )
@@ -25,7 +25,7 @@ export default class StackPlayers extends Component {
 
 function BenchPlayers({players}) {
     return (
-        <div>
+        <div className="benchContainer">
             {
                 players.map(player => {
                     return (
