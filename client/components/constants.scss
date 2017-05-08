@@ -8,7 +8,22 @@ $pitch-width: 100%;
 $pitch-height: 900px;
 $quantity-players: 11;
 
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left {
+  float: left;
+}
+
+.riggt {
+  float: right;
+}

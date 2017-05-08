@@ -1,164 +1,300 @@
 {
-  "players": {
-    "main": [
-      {
-        "name": "A. Hohberg",
-        "asset": "bm-pizarro.jpg",
-        "origin": "Peru",
-        "height": "1.84m",
-        "shirt": "14",
-        "pos": "Delantero",
-        "dob": "36",
-        "goals": 1,
-        "games": 16,
-        "id": 1
-      },
-      {
-        "name": "K Quevedo",
-        "asset": "bm-robben.png",
-        "origin": "Holland",
-        "height": "1.80m",
-        "shirt": "10",
-        "pos": "Delantero",
-        "dob": "32",
-        "goals": 19,
-        "games": 30,
-        "id": 2
-      },
-      {
-        "name": "G. Pacheco",
-        "asset": "bm-alaba.jpg",
-        "origin": "Austria",
-        "height": "1.80m",
-        "shirt": "27",
-        "pos": "Delantero",
-        "dob": "24",
-        "goals": 5,
-        "games": 27,
-        "id": 3
-      },
-      {
-        "name": "R. Cruzado",
-        "asset": "bm-rilbery.jpg",
-        "origin": "France",
-        "height": "1.70m",
-        "shirt": "7",
-        "pos": "Medio Campo",
-        "dob": "32",
-        "goals": 9,
-        "games": 22,
-        "id": 4
-      },
-      {
-        "name": "A. Fuentes",
-        "asset": "bm-schweinsteiger.jpg",
-        "origin": "Germany",
-        "height": "1.87m",
-        "shirt": "24",
-        "pos": "Medio Campo",
-        "dob": "31",
-        "goals": 21,
-        "games": 3,
-        "id": 5
-      },
-      {
-        "name": "L. Aguiar",
-        "asset": "bm-martinez.jpg",
-        "origin": "Spain",
-        "height": "1.90m",
-        "shirt": "8",
-        "pos": "Medio Campo",
-        "dob": "28",
-        "goals": 0,
-        "games": 2,
-        "id": 6
-      },
-      {
-        "name": "F. Duclos",
-        "asset": "bm-lahm.jpg",
-        "origin": "Germany",
-        "height": "1.70",
-        "shirt": "21",
-        "pos": "Defensa",
-        "dob": "32",
-        "goals": 2,
-        "games": 25,
-        "id": 7
-      },
-      {
-        "name": "G. Godoy",
-        "asset": "bm-benatia.jpg",
-        "origin": "France",
-        "height": "1.87m",
-        "shirt": "5",
-        "pos": "Defensa",
-        "dob": "31",
-        "goals": 21,
-        "games": 1,
-        "id": 8
-      },
-      {
-        "name": "M. Araujo",
-        "asset": "bm-dante.jpg",
-        "origin": "Brazil",
-        "height": "1.87m",
-        "shirt": "4",
-        "pos": "Defensa",
-        "dob": "32",
-        "goals": 0,
-        "games": 34,
-        "id": 9
-      },
-      {
-        "name": "H. Riojas",
-        "asset": "bm-dante.jpg",
-        "origin": "Brazil",
-        "height": "1.87m",
-        "shirt": "4",
-        "pos": "Defensa",
-        "dob": "32",
-        "goals": 0,
-        "games": 34,
-        "id": 10
-      },
-      {
-        "name": "L. Butron",
-        "asset": "bm-neuer.jpg",
-        "origin": "Peru",
-        "height": "1.85m",
-        "shirt": "1",
-        "pos": "Portero",
-        "age": "29",
-        "goals": 0,
-        "games": 48,
-        "id": 11
-      }
-    ],
-    "bench": [
-      {
-        "name": "Cachito",
-        "asset": "bm-neuer.jpg",
-        "origin": "Peru",
-        "height": "1.85m",
-        "shirt": "1",
-        "pos": "Portero",
-        "age": "29",
-        "goals": 0,
-        "games": 48,
-        "id": 11
-      },
-      {
-        "name": "Vilchez",
-        "asset": "bm-neuer.jpg",
-        "origin": "Peru",
-        "height": "1.85m",
-        "shirt": "1",
-        "pos": "Portero",
-        "age": "29",
-        "goals": 0,
-        "games": 48,
-        "id": 12
-      }
-    ]
-  }
+  "players": [
+    {
+      "id": 1,
+      "main": true,
+      "name": "K. Quevedo",
+      "asset": "bm-robben.png",
+      "origin": "Peru",
+      "height": "1.80m",
+      "shirt": "27",
+      "pos": "Delantero",
+      "age": "20"
+    },
+    {
+      "id": 2,
+      "main": true,
+      "name": "L. Pajoy",
+      "asset": "bm-robben.png",
+      "origin": "Colombia",
+      "height": "1.81m",
+      "shirt": "11",
+      "pos": "Delantero",
+      "age": "35"
+    },
+    {
+      "id": 3,
+      "main": true,
+      "name": "E. Ramirez",
+      "asset": "bm-robben.png",
+      "origin": "Peru",
+      "height": "1.81m",
+      "shirt": "29",
+      "pos": "Delantero",
+      "age": "19"
+    },
+    {
+      "id": 4,
+      "main": true,
+      "name": "R. Cruzado",
+      "asset": "bm-rilbery.jpg",
+      "origin": "Peru",
+      "height": "1.80m",
+      "shirt": "18",
+      "pos": "Medio Campo",
+      "age": "32"
+    },
+    {
+      "main": true,
+      "name": "A. Fuentes",
+      "asset": "bm-schweinsteiger.jpg",
+      "origin": "Peru",
+      "height": "1.88m",
+      "shirt": "20",
+      "pos": "Defensa",
+      "dob": "31",
+      "id": 5
+    },
+    {
+      "main": true,
+      "name": "L. Aguiar",
+      "asset": "bm-martinez.jpg",
+      "origin": "Uruguay",
+      "height": "1.82m",
+      "shirt": "7",
+      "pos": "Medio Campo",
+      "age": "31",
+      "id": 6
+    },
+    {
+      "main": true,
+      "name": "F. Duclos",
+      "asset": "bm-lahm.jpg",
+      "origin": "Peru",
+      "height": "1.83",
+      "shirt": "5",
+      "pos": "Defensa",
+      "age": "21",
+      "id": 7
+    },
+    {
+      "main": true,
+      "name": "G. Godoy",
+      "asset": "bm-benatia.jpg",
+      "origin": "Uruguay",
+      "height": "1.86m",
+      "shirt": "17",
+      "pos": "Defensa",
+      "age": "31",
+      "id": 8
+    },
+    {
+      "main": true,
+      "name": "H. Riojas",
+      "asset": "bm-dante.jpg",
+      "origin": "Peru",
+      "height": "1.83m",
+      "shirt": "26",
+      "pos": "Defensa",
+      "age": "25",
+      "id": 9
+    },
+    {
+      "main": true,
+      "name": "P. De la Haza",
+      "asset": "bm-dante.jpg",
+      "origin": "Peru",
+      "height": "1.78m",
+      "shirt": "25",
+      "pos": "Defensa",
+      "age": "25",
+      "id": 10
+    },
+    {
+      "main": true,
+      "name": "L. Butron",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.84m",
+      "shirt": "1",
+      "pos": "Portero",
+      "age": "40",
+      "id": 11
+    },
+    {
+      "main": false,
+      "name": "A. Campos",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.85m",
+      "shirt": "31",
+      "pos": "Portero",
+      "age": "24",
+      "id": 12
+    },
+    {
+      "main": false,
+      "name": "D. Prieto",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.91m",
+      "shirt": "12",
+      "pos": "Portero",
+      "age": "21",
+      "id": 13
+    },
+    {
+      "main": false,
+      "name": "M. Araujo",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.78m",
+      "shirt": "24",
+      "pos": "Defensa",
+      "age": "22",
+      "id": 14
+    },
+    {
+      "main": false,
+      "name": "A. Lavalle",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.80m",
+      "shirt": "4",
+      "pos": "Defensa",
+      "age": "19",
+      "id": 15
+    },
+    {
+      "main": false,
+      "name": "C. Garcia",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "",
+      "shirt": "15",
+      "pos": "Defensa",
+      "age": "30",
+      "id": 16
+    },
+    {
+      "main": false,
+      "name": "J.D. Li",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.74m",
+      "shirt": "2",
+      "pos": "Defensa",
+      "age": "22",
+      "id": 17
+    },
+    {
+      "main": false,
+      "name": "F. Rojas",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.74m",
+      "shirt": "3",
+      "pos": "Defensa",
+      "age": "17",
+      "id": 18
+    },
+    {
+      "main": false,
+      "name": "O. Vilchez",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.82m",
+      "shirt": "21",
+      "pos": "Medio Campo",
+      "age": "31",
+      "id": 19
+    },
+    {
+      "main": false,
+      "name": "L. Ramirez",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.80m",
+      "shirt": "14",
+      "pos": "Medio Campo",
+      "age": "32",
+      "id": 20
+    },
+    {
+      "main": false,
+      "name": "J. Cotrina",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.77m",
+      "shirt": "28",
+      "pos": "Medio Campo",
+      "age": "19",
+      "id": 21
+    },
+    {
+      "main": false,
+      "name": "A. Llanos",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "shirt": "16",
+      "pos": "Medio Campo",
+      "age": "20",
+      "id": 22
+    },
+    {
+      "main": false,
+      "name": "L. Garro",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.76m",
+      "shirt": "23",
+      "pos": "Medio Campo",
+      "age": "20",
+      "id": 23
+    },
+    {
+      "main": false,
+      "name": "A. Hohberg",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.76m",
+      "shirt": "8",
+      "pos": "Medio Campo",
+      "age": "25",
+      "id": 24
+    },
+    {
+      "main": false,
+      "name": "A. Carrillo",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.79m",
+      "shirt": "19",
+      "pos": "Delantero",
+      "age": "20",
+      "id": 25
+    },
+    {
+      "main": false,
+      "name": "G. Pacheco",
+      "asset": "bm-neuer.jpg",
+      "origin": "Argentina",
+      "height": "1.77m",
+      "shirt": "10",
+      "pos": "Delantero",
+      "age": "25",
+      "id": 26
+    },
+    {
+      "main": false,
+      "name": "A. Gonzales-Vigil",
+      "asset": "bm-neuer.jpg",
+      "origin": "Peru",
+      "height": "1.77m",
+      "shirt": "22",
+      "pos": "Delantero",
+      "age": "21",
+      "id": 27
+    }
+  ]
 }

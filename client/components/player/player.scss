@@ -114,6 +114,7 @@
   }
 }
 
+
 .playerProfile {
   font-family: DINPro;
   background: $player-toty no-repeat center;
@@ -121,9 +122,8 @@
   color: #d0c075;
   width: 134px;
   height: 200px;
-  position: absolute;
   text-align: center;
-  cursor: hand;
+  cursor: pointer;
 
   .playerCard {
     top: 27px;

@@ -1,7 +1,6 @@
 import "./StackPlayers.scss";
 import "../player/player.scss";
 import React, {Component} from "react";
-import squad from "../squadOne.json";
 import Player from "../player/player";
 export default class StackPlayers extends Component {
 
@@ -9,28 +8,25 @@ export default class StackPlayers extends Component {
         super(props);
     }
 
-    componentDidMount(){
-        console.log("Get json data "+ squad.players);
-    }
     render() {
         return (
             <div className="stackPlayers">
                 <h2>Sustitutos</h2>
-                    <BenchPlayers players={squad.players.bench}/>
+                    <BenchPlayers players={this.props.players} openModalPlayer={this.props.openModalPlayer}/>
             </div>
         )
     }
 
 }
 
-function BenchPlayers({players}) {
+function BenchPlayers({players,openModalPlayer}) {
     return (
         <div className="benchContainer">
             {
                 players.map(player => {
                     return (
 
-                       <Player player={player} key={player.id} className="stackPlayer"/>
+                       <Player key={player.id}  player={player} className="stackPlayer" openModalPlayer={openModalPlayer}/>
                     )
                 })
             }
